@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function jsonData(){
+            var myData =
+`[{
+    "name":"Own",
+    "favoriteNumber": 23,
+    "isProgramer": true,
+    "hobbies":["Reading", "Cooking", "Studying", "Coding"],
+    "familyMembers":[{
+        "Wife":"Helena",
+        "Son":"R2",
+        "Mom":"Mauris",
+        "Dad":"Oswaldo",
+        "OldestBrother":"Leonard",
+        "YoungestBrother":"Rafa"
+    }],
+    "favoriteMovies":[{
+        "nameFir":"Star Wars Episode III ",
+        "titleFir":"The Revenge of the Sith",
+        "nameSec":"Star Wars Episode IV",
+        "titleSec": "A New Hope",
+        "nameThird":"Star Wars",
+        "titleThird":"Rogue One",
+        "nameFourth":"Star Wars IV",
+        "titleFourth":"The Return of the Jedi"
+    }],
+
+}]`
+ console.log(myData);
+var parse = JSON.parse(myData);
+
+        console.log(parse);
+       }        
+    </script>
+    <button onclick="jsonData()">Print to the Console</button>
+</body>
+
+</html>
