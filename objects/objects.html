@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Please Go To The Console</h2>
     <script>
-        class addition{
-     constructor(num1, num2, num3){
-         this.value = num1;
-         this.value2 = num2;
-         this.value3 = num3;
-     }
-     value4(){
- 
-         console.log(this.value + this.value2 / this.value3);
-     }
- }
- const result = new addition(20, 25, 30);
- console.log(result);
- result.value4();
+        class operation {
+            constructor(num1, num2, num3) {
+                this.value = num1;
+                this.value2 = num2;
+                this.value3 = num3;
+            }
+            value4() {
+                console.log(this.value + this.value2 / this.value3);
+            }
+        }
+        const result = new addition(100, 25, 30);
+        console.log(result);
+        result.value4();
 
 
-  let myPhone = function (brand, model, year, color, capacity) {
+        let myPhone = function (brand, model, year, color, capacity) {
             this.brand = brand;
             this.model = model;
             this.year = year;
             this.color = color;
             this.capacity = capacity;
-            this.prop6 = function(){
+            this.prop6 = function () {
                 console.log(brand);
                 console.log(model);
                 console.log(year);
@@ -40,10 +41,37 @@
         const phone1 = new myPhone('iPhone', 'X', '2018', 'gray', '256Gb');
         phone1.prop6();
         console.log(phone1);
-        
+
+
+        var person = {
+            name: ['bob', 'smith'],
+            age: 32,
+            weight: 180,
+            gender: 'male',
+            books: { '0': 'book of mormon', '1': 'one hundred years of solitude' },
+            familyMembers: 5,
+            greeting: function () {
+                console.log('Hi! I\'m ' + this.name + '. ' + 'My age is ' + this.age);
+            },
+            favoriteBooks: function () {
+                console.log('My favorite books are ' + this.books[0] + ', and, ' + this.books[1]);
+            },
+            something: function () {
+                console.log('Hello World!');
+            }
+        }
+        person['weight']=175;
+        console.log(person);
+        person.something();
+        person.greeting();
+        person.favoriteBooks();
+        console.log(person.gender);
+        console.log(person.familyMembers);
     </script>
     <footer style="background-color:aquamarine;">
-            <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
-        </footer>
+        <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a
+                href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
+    </footer>
 </body>
+
 </html>
