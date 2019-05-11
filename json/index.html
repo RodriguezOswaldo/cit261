@@ -18,7 +18,7 @@
     "favoriteNumber": 23,
     "isProgramer": true,
     "hobbies":["Reading", "Cooking", "Studying", "Coding"],
-    "familyMembers":[{
+"familyMembers":[{
         "Wife":"Helena",
         "Son":"R2",
         "Mom":"Mauris",
@@ -35,13 +35,17 @@
         "titleThird":"Rogue One",
         "nameFourth":"Star Wars IV",
         "titleFourth":"The Return of the Jedi"
-    }],
-
+    }]
 }]`
+
  console.log(myData);
 var parse = JSON.parse(myData);
+console.log("Parse----------------------------------------------");
+console.log(parse);
+var string = JSON.stringify(myData);
+console.log("String------------------------------------");
+console.log(string);
 
-        console.log(parse);
        }        
     </script>
     <button onclick="jsonData()">Print to the Console</button>
