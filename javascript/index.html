@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS stuff</title>
     <style>
-    *{
-        margin:10px;
-        padding:0px;
-    }
-    body{
-        background: #299b91;
-        font-size: 20px;
-    }
-    button{
-        padding:10px;
-        font-size: 25px;
-        border-radius: 10px 10px ;
-        background: #4d807b;
-        border: 1px solid gray;
-        color:#89a522;
-    }
+        * {
+            margin: 10px;
+            padding: 0px;
+        }
+
+        body {
+            background: #299b91;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 25px;
+            border-radius: 10px 10px;
+            background: #4d807b;
+            border: 1px solid gray;
+            color: #89a522;
+        }
     </style>
 </head>
+
 <body>
-    
+
     <script>
-        function theArray(){
-            var myList =new Array( 3, 4, 5, 6 ,7 ,8, 9 ,10 ,11 ,12, 13);
-            myList['one']= 1;
-            myList['two']= 2;
-            var fruits = new Array(" Watermelon", " Strawberry"," Mango", " Banana", 
-            " Apple", " Orange", " Grapes", " Papaya", " Cherry", 
-            " Lime", " Pinapple", " Coconut");
-            var message = '';
-            for(let i =0; i<myList.length; i++){
-                if(myList.length < fruits.length){
-                    fruits.sort();
-                    message += "<li>" + fruits[i] +"</li>";
-                }else{
-                    message = "Go to the console in order to see the Array printed several times because of the loop";
-                    console.log(myList);  
-                }
-            }   
-           document.getElementById('output').innerHTML = "<br>" + "<ul> " + message + "</ul>";           
+        function firstFunc() {
+            var myList = new Array(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+            myList['one'] = 1;
+            myList['two'] = 2;
+            var fruits = new Array(" Watermelon", " Strawberry", " Mango", " Banana",
+                " Apple", " Orange", " Grapes", " Papaya", " Cherry",
+                " Lime", " Pinapple", " Coconut");
+            var result = secondFunc(myList, fruits);
+            document.getElementById('output').innerHTML = "<br>" + "<ul> " + result + "</ul>";
+           
         }
-        </script>
-          <br>  <button title="Click me!"onclick="theArray()"> Organize Array</button>
-          <br> <div id="output"></div>
+
+        function secondFunc(myList, fruits) {
+            var message = '';
+            for (let i = 0; i < myList.length; i++) {
+                if (myList.length < fruits.length) {
+                    fruits.sort();
+                    message += "<li>" + fruits[i] + "</li>";
+                } else {
+                    message = "Go to the console in order to see the Array printed several times because of the loop";
+                    console.log(myList);
+                }
+            }
+            return message;
+        }
+        function secondButton() {
+            var myList = new Array(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+            myList['one'] = 1;
+            myList['two'] = 2;
+            var fruits = new Array(" Watermelon", " Strawberry", " Mango", " Banana",
+                " Apple", " Orange", " Grapes", " Papaya", " Cherry",
+                " Lime", " Pinapple", " Coconut");
+            var result = otherFunc(myList, fruits);
+            document.getElementById('output').innerHTML = "<br>" + "<ul> " + result + "</ul>";
+        }
+
+        function otherFunc(myList, fruits) {
+            var message = '';
+            for (let i = 0; i < myList.length; i++) {
+                if (myList.length > fruits.length) {
+                    fruits.sort();
+                    message += "<li>" + fruits[i] + "</li>";
+                } else {
+                    message = "Go to the console in order to see the Array printed several times because of the loop";
+                    console.log(myList);
+                }
+            }
+            return message;
+        }
+       
+
+    </script>
+    <br> <button title="Click me!" onclick="firstFunc()"> Organize Array</button>
+    <br>
+    <div id="output"></div>
+    <br> <button id="secBtn" title="Click me!" onclick="secondButton()"> Organize Array</button>
+
 </body>
+
 </html>
