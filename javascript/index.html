@@ -16,7 +16,6 @@
             background: #299b91;
             font-size: 20px;
         }
-
         button {
             padding: 10px;
             font-size: 25px;
@@ -40,9 +39,7 @@
                 " Lime", " Pinapple", " Coconut");
             var result = secondFunc(myList, fruits);
             document.getElementById('output').innerHTML = "<br>" + "<ul> " + result + "</ul>";
-           
         }
-
         function secondFunc(myList, fruits) {
             var message = '';
             for (let i = 0; i < myList.length; i++) {
@@ -66,7 +63,6 @@
             var result = otherFunc(myList, fruits);
             document.getElementById('output').innerHTML = "<br>" + "<ul> " + result + "</ul>";
         }
-
         function otherFunc(myList, fruits) {
             var message = '';
             for (let i = 0; i < myList.length; i++) {
@@ -80,7 +76,7 @@
             }
             return message;
         }
-       
+
 
     </script>
     <br> <button title="Click me!" onclick="firstFunc()"> Organize Array</button>
