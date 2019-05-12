@@ -11,7 +11,7 @@
 <body>
     <h2>Please Go To The Console</h2>
     <script>
-        class numbers{
+        class Numbers{
             constructor(num1, num2, num3) {
                 this.value = num1;
                 this.value2 = num2;
@@ -21,9 +21,9 @@
                 console.log(this.value % this.value2 * this.value3);
             }
         }
-        const result = new numbers(100, 30, 30);
-        console.log(result);
-        result.someOper();
+        let firstInst = new Numbers(100, 30, 30);
+        console.log(firstInst);
+        firstInst.someOper();
 
 
         let myPhone = function (brand, model, year, color, capacity) {
@@ -39,11 +39,11 @@
             }
         }
         const phone1 = new myPhone('iPhone', 'X', '2018', 'gray', '256Gb');
-        phone1.prop6();
         console.log(phone1);
+        phone1.prop6();
 
 
-        var person = {
+        var person = new Object({
             name: ['bob', 'smith'],
             age: 32,
             weight: 180,
@@ -59,7 +59,7 @@
             something: function () {
                 console.log('Hello World!');
             }
-        }
+        })
         person['weight']=175;
         console.log(person);
         person.something();
