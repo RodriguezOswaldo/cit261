@@ -3,7 +3,7 @@ body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
     background: #888;
-    color:#fff;
+    color:white;
     font-size: 1.1em;
     line-height: 1.5;
     text-align: center;
@@ -34,7 +34,7 @@ p{
 .btn:hover{
     background: #eea;
     border: 2px solid gray;
-    font-size: 20px;
+    font-size: 1.1em;
     
 }
 /* Header Showcase */
