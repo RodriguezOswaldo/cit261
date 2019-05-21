@@ -12,9 +12,9 @@
     <h2>JavaScript Object Notation - Please go to Console</h2>
     <script>
 
-        function jsonData(){
-            var myData =
-`{
+function jsonData() {
+    var myData =
+                `{
     "name":"Own",
     "favoriteNumber": 23,
     "isProgramer": true,
@@ -39,20 +39,21 @@
     }]
 }`
 
- console.log(myData);
-var parse = JSON.parse(myData);//Convert data into a JS object 
-console.log("Parse--------------------------------------");
-console.log(parse);
-var string = JSON.stringify(parse);//Convert data into a String
-console.log("String------------------------------------");
-console.log(string);
+            console.log(myData);
+            var parse = JSON.parse(myData);//Convert data into a JS object 
+            console.log("Parse--------------------------------------");
+            console.log(parse);
+            var string = JSON.stringify(parse);//Convert data into a String
+            console.log("String------------------------------------");
+            console.log(string);
 
-       }        
+        }        
     </script>
     <button onclick="jsonData()">Print to the Console</button>
     <footer style="background-color:aquamarine;">
-            <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
-        </footer>
+        <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a
+                href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
+    </footer>
 </body>
 
 </html>
