@@ -12,7 +12,7 @@
 <body>
     <!--Header -->
     <header id="showcase" class="grid">
-        <div class="bg-image"></div>
+        <div class="bg-image" id="bg-image"></div>
         <div class="content-wrap">
             <h1>Welcome To My Site!!</h1>
 
@@ -20,6 +20,7 @@
                 Inventore voluptate, repudiandae molestiae voluptatibus ad
                 perferendis laboriosam labore molestias? Nobis, vel!</p>
                 <button class="btn" onclick="updateImages()">UpdateCSS</button>
+                <button class="btn" onclick="resetImages()">ResetCSS</button>
         </div>
 
 
@@ -105,7 +106,7 @@
         </section>
         <!--Section D-->
         <section id="section-d" class="grid">
-            <div class="box">
+            <div class="box" id="box1">
                 <h2 class="content-title">Contact Us</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Rem quisquam ullam mollitia, repellendus saepe ipsam esse
@@ -116,7 +117,7 @@
                 <button class="btn" onclick="updateCss()">Update CSS</button>
 
             </div>
-            <div class="box">
+            <div class="box box2">
                 <h2 class="content-title"> About Our Company</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Reprehenderit, quos.</p>
@@ -136,27 +137,41 @@
             function updateCss(){
                 let footer = document.getElementById('main-footer');
                 let sectionC = document.getElementById('section-c');
+                let box1 = document.getElementById('box1');
+                console.log(box1);
+                box1.style.backgroundColor = "#16866e";
+                let box2 = document.getElementsByClassName('box2');
                 footer.style.backgroundColor = "green";
                 footer.style.color = "black";
                 footer.style.fontSize = "20px";
-                let body = document.getElementsByClassName('card');
                 sectionC.style.background= "#555";
                 sectionC.style.color= "white";
             }
             function resetCss(){
                 let footer = document.getElementById('main-footer');
                 let sectionC = document.getElementById('section-c');
+                let box1 = document.getElementById('box1');
                 footer.style.backgroundColor = "black";
                 footer.style.color = "#2690d4";
                 footer.style.fontSize = "1em";
                 sectionC.style.background= "white";
                 sectionC.style.color= "#333";
+                box1.style.backgroundColor = "#2690d4";
+
             }
             function updateImages(){
-                let image = document.getElementsByClassName('bg-image');
-                image.style.backgroundImage = "url('/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')";
+                let header = document.getElementById('showcase');
+                let image = document.getElementById('bg-image');
+                header.style.fontSize = "1.5em";
+                image.style.backgroundImage = "url('https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
             }
-                
+            function resetImages(){
+                let header = document.getElementById('showcase');
+                let image = document.getElementById('bg-image');
+                header.style.fontSize = "1em";
+                image.style.backgroundImage = "url('https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')";
+
+            }
 
     </script>
 </body>
