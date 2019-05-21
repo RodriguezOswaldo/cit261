@@ -29,6 +29,7 @@ p{
     padding: 1em 2em;
     border: 1px solid #666;
     margin:.5em 0;
+    cursor: progress;
 }
 .btn:hover{
     background: #eea;
