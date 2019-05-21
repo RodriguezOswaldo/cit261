@@ -14,7 +14,7 @@
 
         function jsonData(){
             var myData =
-`[{
+`{
     "name":"Own",
     "favoriteNumber": 23,
     "isProgramer": true,
@@ -37,11 +37,11 @@
         "nameFourth":"Star Wars IV",
         "titleFourth":"The Return of the Jedi"
     }]
-}]`
+}`
 
  console.log(myData);
-var parse = JSON.parse(myData);//Convert data in a JS object 
-console.log("Parse----------------------------------------------");
+var parse = JSON.parse(myData);//Convert data into a JS object 
+console.log("Parse--------------------------------------");
 console.log(parse);
 var string = JSON.stringify(parse);//Convert data into a String
 console.log("String------------------------------------");
