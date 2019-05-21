@@ -19,6 +19,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Inventore voluptate, repudiandae molestiae voluptatibus ad
                 perferendis laboriosam labore molestias? Nobis, vel!</p>
+                <button class="btn" onclick="updateImages()">Read More...</button>
             <a href="#section-b" class="btn">Read More...</a>
         </div>
 
@@ -112,12 +113,15 @@
                     pariatur blanditiis quam excepturi nisi nihil explicabo nulla
                     non deleniti molestiae, sint quibusdam fuga?</p>
                 <p>contact@mysoluctions.test</p>
+
+                <button class="btn" onclick="updateCss()">Update CSS</button>
+
             </div>
             <div class="box">
                 <h2 class="content-title btn"> About Our Company</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Reprehenderit, quos.</p>
-                    <button class="btn" onclick="updateCss()">Update CSS</button>
+                    <button class="btn" onclick="resetCss()">Reset CSS</button>
             </div>
         </section>
     </main>
@@ -131,10 +135,20 @@
     </footer>
     <script>
             function updateCss(){
-                var footer = document.getElementById('main-footer');
-                    console.log(footer);
+                let footer = document.getElementById('main-footer');
+                footer.style.backgroundColor = "green";
+                var body = document.getElementsByClassName('grid');
+                
             }
-
+            function resetCss(){
+                let footer = document.getElementById('main-footer');
+                footer.style.backgroundColor = "black";
+            }
+            function updateImages(){
+                let image = document.getElementsByClassName('bg-image');
+                console.log(image);
+            }
+                
 
     </script>
 </body>
