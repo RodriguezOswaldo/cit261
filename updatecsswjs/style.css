@@ -138,6 +138,5 @@ p{
         grid-template-columns: repeat(3, 1fr);
         column-gap: 20px;
     }
-    #section-b li{
-    } 
+   
 }
