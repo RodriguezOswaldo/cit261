@@ -21,6 +21,9 @@ p{
     margin: 0;
     padding: 1em 0;
 }
+#btn1{
+    left: 150px;;
+}
 .btn{
     display: inline-block;
     background: 333;
@@ -30,6 +33,7 @@ p{
     border: 1px solid #666;
     margin:.5em 0;
     cursor: pointer;
+    position: fixed;
 }
 .btn:hover{
     background: #eea;
