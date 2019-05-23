@@ -171,7 +171,10 @@
                 let sectionC = document.getElementById('section-c');
                 let box1 = document.getElementById('box1');
                 let box2 = document.getElementsByClassName('box2');
-
+                let sectionBcards = document.querySelector('div[id=card1]');
+                let sectionBcards2 = document.querySelector('div[id=card2]');
+                let sectionBcards3 = document.querySelector('div[id=card3]');
+                console.log(sectionBcards);
                 header.style.color = '#fff';
                 image.style.backgroundImage = "url('https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
                 cards.style.background = '#333';
@@ -184,17 +187,21 @@
                 box1.style.backgroundColor = "#16866e";
                 sectionA.style.background= "#444";
                 sectionA.style.color= "#eaeaea";
-
+                sectionBcards.style.background = "purple";
+                sectionBcards2.style.background = "#156";
+                sectionBcards3.style.background ="pink";
 
             }
-            
 
             function resetImages(){
                 let header = document.getElementById('showcase');
                 let image = document.getElementById('bg-image');
                 let cards = document.getElementById('section-b');
-
+                
                 let sectionA = document.getElementById('section-a');
+                let sectionBcards = document.querySelector('div[id=card1]');
+                let sectionBcards2 = document.querySelector('div[id=card2]');
+                let sectionBcards3 = document.querySelector('div[id=card3]');
                 let footer = document.getElementById('main-footer');
                 let sectionC = document.getElementById('section-c');
                 let box1 = document.getElementById('box1');
@@ -213,6 +220,9 @@
                 box1.style.backgroundColor = "#2690d4";
                 sectionA.style.background= "#eaeaea";
                 sectionA.style.color= "#333";
+                sectionBcards.style.background = "#fff";
+                sectionBcards2.style.background = "#fff";
+                sectionBcards3.style.background ="#fff";
              }
 
 
