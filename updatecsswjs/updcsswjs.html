@@ -46,7 +46,7 @@
         <section id="section-b" class="grid">
             <ul>
                 <li>
-                    <div class="card">
+                    <div class="card cardcolor"  id="card1">
                         <img src="https://source.unsplash.com/random/900x700" alt="Some Random Picture from unsplash">
                         <div class="card-content">
                             <h3 class="card-title">Good Stuff</h3>
@@ -61,7 +61,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card">
+                    <div class="card cardcolor" id="card2">
                         <img src="https://source.unsplash.com/random/900x701" alt="Some Random Picture from unsplash">
                         <div class="card-content">
                             <h3 class="card-title">The Development</h3>
@@ -77,7 +77,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card">
+                    <div class="card cardcolor" id="card3">
                         <img src="https://source.unsplash.com/random/900x702" alt="Some Random Picture from unsplash">
                         <div class="card-content">
                             <h3 class="card-title">The Other Window</h3>
@@ -134,20 +134,19 @@
     </footer>
     <script>
 
-        const btn1 = document.getElementById('btn1');
 
             function updateCss(){
                 let footer = document.getElementById('main-footer');
                 let sectionC = document.getElementById('section-c');
                 let box1 = document.getElementById('box1');
-                console.log(box1);
-                box1.style.backgroundColor = "#16866e";
                 let box2 = document.getElementsByClassName('box2');
                 footer.style.backgroundColor = "green";
                 footer.style.color = "black";
                 footer.style.fontSize = "20px";
                 sectionC.style.background= "#555";
                 sectionC.style.color= "white";
+                box1.style.backgroundColor = "#16866e";
+
             }
             function resetCss(){
                 let footer = document.getElementById('main-footer');
@@ -164,20 +163,51 @@
 
             function updateImages(){
                 let header = document.getElementById('showcase');
+                let cards = document.getElementById('section-b');
                 let image = document.getElementById('bg-image');
+
+                let footer = document.getElementById('main-footer');
+                let sectionC = document.getElementById('section-c');
+                let box1 = document.getElementById('box1');
+                let box2 = document.getElementsByClassName('box2');
+
                 header.style.color = '#fff';
                 image.style.backgroundImage = "url('https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
-            
+                cards.style.background = '#333';
+
+                footer.style.backgroundColor = "green";
+                footer.style.color = "black";
+                footer.style.fontSize = "20px";
+                sectionC.style.background= "#555";
+                sectionC.style.color= "white";
+                box1.style.backgroundColor = "#16866e";
             }
             
 
             function resetImages(){
                 let header = document.getElementById('showcase');
                 let image = document.getElementById('bg-image');
+                let cards = document.getElementById('section-b');
+
+                let footer = document.getElementById('main-footer');
+                let sectionC = document.getElementById('section-c');
+                let box1 = document.getElementById('box1');
+
+
                 header.style.color = "#333";
                 image.style.backgroundImage = "url('https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')";
                 console.log('this');
+                cards.style.background = '#888';
+
+                footer.style.backgroundColor = "black";
+                footer.style.color = "#2690d4";
+                footer.style.fontSize = "1em";
+                sectionC.style.background= "white";
+                sectionC.style.color= "#333";
+                box1.style.backgroundColor = "#2690d4";
+
              }
+
 
             btn1.addEventListener('click', updateImages, false);
             btn1.removeEventListener('dbclick', updateImages, true);
