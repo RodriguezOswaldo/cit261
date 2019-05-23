@@ -22,6 +22,7 @@ p{
     padding: 1em 0;
 }
 #btn1{
+    margin-left:-100px;
     left: 150px;;
 }
 .btn{
@@ -34,6 +35,7 @@ p{
     margin:.5em 0;
     cursor: pointer;
     position: fixed;
+    left:200px;
 }
 .btn:hover{
     background: #eea;
@@ -119,7 +121,10 @@ p{
 /* Media Query */
 
 @media(min-width: 700px){
- 
+    #btn1{
+        margin-left:200px;
+        margin-right:20px;
+    }
     .grid{
         display: grid;
         grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr; 
