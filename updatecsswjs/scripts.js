@@ -7,4 +7,5 @@ let titles = document.getElementsByTagName('h2');
         console.log(titles);
         for(i=0;i<titles.length;i++){
             titles[i].style.fontSize ="30px";
+            
         }
