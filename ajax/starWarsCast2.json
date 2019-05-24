@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Star Wars Episode IV - A New Hope",
+        "Casting": {
+            "bestChar": "Darth Vader",
+            "Harrison Ford": "Han Solo",
+            "Carrie Fisher": "Princess Leia",
+            "Ian McDiarmid": "Sheev Palpatine",
+            "Anthony Daniels": "C3PO",
+            "Peter Mayhew": "Chewbacca",
+            "Alec Guinness": "Obi-Wan Kenobi",
+            "Frank Oz": "Yoda"
+        }
+    },
+    {
+        "title": "Star Wars Episode V - The Empire Strikes Back",
+        "Casting": {
+            "Billy Dee Williams": "Lando Calrissian",
+            "Temura Morrison": "Boba Fett",
+            "John Hollis": "Lobot",
+            "Des Webb": "Wampa",
+            "bestChar": "R2-D2"
+
+        }
+    },
+    {
+        "title": "Star Wars Episode VI - Return of the Jedi",
+        "Casting": {
+            "Sebastian Shaw": "Darth Vader",
+            "Erik Bauersfeld": "Admiral Ackbar",
+            "bestChar": "Luke Skywalker"
+
+        }
+    }
+]

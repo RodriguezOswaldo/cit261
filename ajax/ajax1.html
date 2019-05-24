@@ -8,23 +8,23 @@
 </head>
 <body>
     <h2> AJAX </h2>
-    <p></p>
+    <p id="output"></p>
 
     <script>
-        const xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function (){
-            if(xhr.readyState == 4){
-                if(xhr.status== 200){
-                    console.log(xhr.responseText);
-                } if(xhr.status == 404){
-                        console.log("file is inexistent");
-                    }       
+        const myRequest = new XMLHttpRequest(); //We create an intance of a request inside a variable. 
+        myRequest.open('GET', 'starWarsCast.json', true);// we use the open method to get or send Data from or somewhere
+        myRequest.onload = function(){ //We say the browser what to do with the data.
+            var myData = JSON.parse(myRequest.responseText);
+            console.log(myData);
+            var ep4Casting = myData['ep4Casting'];
+            var ep5Casting = myData['ep5Casting'];
+            var ep6Casting = myData['ep6Casting'];
+            console.table(ep4Casting);
+            console.table(ep5Casting);
+            console.table(ep6Casting);
+            document.getElementById('output').innerHTML = ep4Casting[1];
             }
-        };        
-        console.log(xhr.readyState);
-
-        xhr.open('get', 'json2.json', true);
-        xhr.send();
+        myRequest.send(); // We send the request to the server / 
     
     </script>
     

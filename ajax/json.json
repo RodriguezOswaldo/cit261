@@ -3,14 +3,14 @@
     "favoriteNumber": 23,
     "isProgramer": true,
     "hobbies":["Reading", "Cooking", "Studying", "Coding"],
-    "familyMembers":[{
+    "familyMembers":{
         "Wife":"Helena",
         "Son":"R2",
         "Mom":"Mauris",
         "Dad":"Oswaldo",
         "OldestBrother":"Leonard",
         "YoungestBrother":"Rafa"
-    }],
+    },
     "favoriteMovies":[{
         "nameFir":"Star Wars Episode III ",
         "titleFir":"The Revenge of the Sith",
