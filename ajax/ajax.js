@@ -7,7 +7,7 @@ function theFunction() {
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'starWarsCast2.json', true);
     ourRequest.onload = function () {
-        if (ourRequest.status >= 200 && ourRequest.status < 400) {//Handling Exceptions
+        if (ourRequest.status >= 200 && ourRequest.status < 400) {//Handling Exceptions/Errors
             var myData = JSON.parse(ourRequest.responseText);
             var someContent = " ";
             for (i = 0; i < myData.length; i++) {
@@ -16,8 +16,7 @@ function theFunction() {
             }
             console.log(myData);
         } else {
-            someContent = "There was an error requesting the data";
-            theContainer[0].insertAdjacentElement('beforeend', someContent);
+            console.log("There was an error requesting the file");
         }
     }
     ourRequest.send();
@@ -26,6 +25,6 @@ function theFunction() {
         btn[0].style.display = "none";
         theContainer[1].style.display = "none";
     } else {
-        console.log("Somethings is wrong with the Button!");
+        console.log("Something is wrong with the Button!");
     }
 };
