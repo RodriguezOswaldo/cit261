@@ -134,6 +134,8 @@
     </footer>
     <script>
             function updateImages(){
+
+                /* Variable Selectors */
                 let header = document.getElementById('showcase');
                 let cards = document.getElementById('section-b');
                 let image = document.getElementById('bg-image');
@@ -142,10 +144,14 @@
                 let footer = document.getElementById('main-footer');
                 let sectionC = document.getElementById('section-c');
                 let box1 = document.getElementById('box1');
-                let box2 = document.getElementsByClassName('box2');
                 let sectionBcards = document.querySelector('div[id=card1]');
                 let sectionBcards2 = document.querySelector('div[id=card2]');
                 let sectionBcards3 = document.querySelector('div[id=card3]');
+                let headings = document.getElementsByTagName('h3');
+                console.log(headings);
+                
+
+                /* Styles  */
                 header.style.color = '#fff';
                 image.style.backgroundImage = "url('https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
                 cards.style.background = '#333';
@@ -162,9 +168,14 @@
                 sectionBcards.style.background = "purple";
                 sectionBcards2.style.background = "#156";
                 sectionBcards3.style.background ="pink";
+
+                for(i=0; i<headings.length; i++){
+                    headings[i].style.textShadow = "2px 2px 5px green";
+                }
             }
 
             function resetImages(){
+                /* Variable Selectors */
                 let header = document.getElementById('showcase');
                 let image = document.getElementById('bg-image');
                 let cards = document.getElementById('section-b');
@@ -176,8 +187,10 @@
                 let footer = document.getElementById('main-footer');
                 let sectionC = document.getElementById('section-c');
                 let box1 = document.getElementById('box1');
+                let headings = document.getElementsByTagName('h3');
 
 
+                /* Styles  */
                 header.style.color = "#333";
                 // image.style.backgroundImage = "url('https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')";
                 image.style.backgroundImage = "url('https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')";
@@ -194,12 +207,11 @@
                 sectionBcards.style.background = "#fff";
                 sectionBcards2.style.background = "#fff";
                 sectionBcards3.style.background ="#fff";
+
+                for(i=0; i<headings.length; i++){
+                    headings[i].style.textShadow = "none";
+                }
              }
-
-
-            // btn1.addEventListener('click', updateImages, false);
-            // btn1.removeEventListener('dbclick', updateImages, true);
-                
 
     </script>
 </body>
