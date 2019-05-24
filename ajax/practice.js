@@ -40,7 +40,25 @@ btn[0].addEventListener("click", function(){
 function newFunction(theData){
     var someContent = " ";
     for(i=0; i<theData.length; i++){
-        someContent += "<ul>" +  theData[i].name + "is a " + theData[i].species +". </ul>";
+        someContent += "<ul>" +  theData[i].name + "is a " + theData[i].species + " that likes to eat "; 
+         for(ii = 0; ii < theData[i].foods.likes.length; ii++){
+            if(ii == 0){
+                someContent += theData[i].foods.likes[ii];
+            }else{
+                someContent += ", and " + theData[i].foods.likes[ii];
+
+            }
+        }
+        someContent += '; and dislikes ';
+        for(ii = 0; ii < theData[i].foods.dislikes.length; ii++){
+            if(ii == 0){
+                someContent += theData[i].foods.dislikes[ii];
+            }else{
+                someContent += "; and " + theData[i].foods.dislikes[ii];
+
+            }
+        }
+         someContent +=". </ul>";
     }
 
     theContainer[0].insertAdjacentHTML('beforeend',someContent);
