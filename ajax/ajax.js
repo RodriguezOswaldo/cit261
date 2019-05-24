@@ -10,7 +10,6 @@ function theFunction() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {//Handling Exceptions
             var myData = JSON.parse(ourRequest.responseText);
             var someContent = " ";
-            // newFunction(ourData);
             for (i = 0; i < myData.length; i++) {
                 someContent = "<ul>" + myData[i].title + "</ul>" + "<p> The Best Character in that movie was    " + myData[i].Casting.bestChar + "</p>";
                 theContainer[0].insertAdjacentHTML('beforeend', someContent);
