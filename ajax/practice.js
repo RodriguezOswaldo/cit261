@@ -7,9 +7,17 @@ btn[0].addEventListener("click", function(){
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-'+pageCounter +'.json', true);
     ourRequest.onload = function () {
-        var ourData = JSON.parse(ourRequest.responseText);
-        console.log(ourData[0]);
-        newFunction(ourData); 
+        if(ourRequest.status>=200 && ourRequest.status < 400){
+            var ourData = JSON.parse(ourRequest.responseText);
+            console.log(ourData[0]);
+            newFunction(ourData); 
+        }else{
+            console.log("We connected to the server but I returned an error");
+        }
+        
+    };
+    ourRequest.onerror = function(){
+        console.log('conection error');
     }
     ourRequest.send();
     pageCounter++;
