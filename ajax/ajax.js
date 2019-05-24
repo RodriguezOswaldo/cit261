@@ -1,5 +1,6 @@
 var theContainer = document.getElementsByTagName('p');
 var btn = document.getElementsByClassName('btn');
+var clickCounter = 1;
 
 
 function theFunction() {
@@ -16,4 +17,11 @@ function theFunction() {
         console.log(myData);
     }
     ourRequest.send();
+    clickCounter++;
+    if(clickCounter = 2){
+        btn[0].style.display = "none";
+        theContainer[1].style.display = "none";
+    }else{
+        console.log("Somethings is wrong with the Button!");
+    }
 };
