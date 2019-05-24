@@ -10,7 +10,6 @@ btn[0].addEventListener("click", function(){
         var ourData = JSON.parse(ourRequest.responseText);
         console.log(ourData[0]);
         newFunction(ourData);
-
     }
     ourRequest.send();
 });
@@ -36,7 +35,6 @@ function newFunction(theData){
     var someContent = " ";
     for(i=0; i<theData.length; i++){
         someContent += "<ul>" +  theData[i].name + "is a " + theData[i].species +". </ul>";
-
     }
 
     theContainer[0].insertAdjacentHTML('beforeend',someContent);
