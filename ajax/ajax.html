@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,67 +8,72 @@
     <title>Requesting JSON File with AJAX</title>
 
     <style>
-        p{
+        p {
             background: black;
             color: white;
             font-size: 20px;
-            margin:10px;
+            margin: 10px;
         }
-        ul{
+
+        ul {
             font-weight: bolder;
             color: yellow;
             font-family: Arial, Helvetica, sans-serif;
         }
-        .btn{
+
+        .btn {
             border-radius: 20px;
             font-size: 20px;
             padding: 20px;
             border: 5px solid gray;
             background: #999;
         }
-        .btn:hover{
+
+        .btn:hover {
             background: rgba(255, 255, 0, 0.842);
             border: 5px solid hsl(61, 72%, 52%);
         }
     </style>
 </head>
+
 <body>
     <h2>Requesting a JSON file using AJAX</h2>
-    <button onclick="theFunction()"class="btn">Request JSON file</button>
+    <button onclick="theFunction()" class="btn">Request JSON file</button>
     <p></p>
-    <p style="color:beige; font-weight: bolder; font-size: 40px"> Please &#9757; Click the button  </p>
+    <p style="color:beige; font-weight: bolder; font-size: 40px"> Please &#9757; Click the button </p>
     <script src="ajax.js">
         var theContainer = document.getElementsByTagName('p');
-var btn = document.getElementsByClassName('btn');
-var clickCounter = 1;
+        var btn = document.getElementsByClassName('btn');
+        var clickCounter = 1;
 
 
-function theFunction() {
-    var ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'starWarsCast2.json', true);
-    ourRequest.onload = function () {
-        if (ourRequest.status >= 200 && ourRequest.status < 400) {//Handling Exceptions/Errors
-            var myData = JSON.parse(ourRequest.responseText);
-            var someContent = " ";
-            for (i = 0; i < myData.length; i++) {
-                someContent = "<ul>" + myData[i].title + "</ul>" + "<p> The Best Character in that movie was    " + myData[i].Casting.bestChar + "</p>";
-                theContainer[0].insertAdjacentHTML('beforeend', someContent);
+        function theFunction() {
+            var ourRequest = new XMLHttpRequest();
+            ourRequest.open('GET', 'starWarsCast2.json', true);
+            ourRequest.onload = function () {
+                if (ourRequest.status >= 200 && ourRequest.status < 400) {//Handling Exceptions/Errors
+                    var myData = JSON.parse(ourRequest.responseText);
+                    var someContent = " ";
+                    for (i = 0; i < myData.length; i++) {
+                        someContent = "<ul>" + myData[i].title + "</ul>" + "<p> The Best Character in that movie was    " + myData[i].Casting.bestChar + "</p>";
+                        theContainer[0].insertAdjacentHTML('beforeend', someContent);
+                    }
+                    console.log(myData);
+                } else {
+                    console.log("There was an error requesting the file");
+                }
             }
-            console.log(myData);
-        } else {
-            console.log("There was an error requesting the file");
-        }
-    }
-    ourRequest.send();
-    clickCounter++;
-    if (clickCounter = 2) {
-        btn[0].style.display = "none";
-        theContainer[1].style.display = "none";
-    } else {
-        console.log("Something is wrong with the Button!");
-    }
-};
+            ourRequest.send();
+            clickCounter++;
+            if (clickCounter = 2) {
+                btn[0].style.display = "none";
+                theContainer[1].style.display = "none";
+            } else {
+                console.log("Something is wrong with the Button!");
+            }
+        };
     </script>
-    
+
 </body>
+
 </html>
