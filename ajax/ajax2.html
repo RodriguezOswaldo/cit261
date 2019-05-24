@@ -8,19 +8,11 @@
 </head>
 <body>
     <h2>Send JSON using AJAX Post</h2>
-    <script>
-        const toSend = {
-            hobbies: "sleep",
-            name: "theName",
-            done: 'never'
-        };
+    <p></p>
+    <button onclick="theFunction()"class="btn">Hit me!</button>
 
-        const jsonStri = JSON.stringify(toSend);
-        const xhr = new XMLHttpRequest();
-
-        xhr.open("POST", "json2.php");
-        xhr.setRequestHeader("Content-Type", "application/json ");
-        xhr.send(jsonStri);
+    <script src="practice.js">
+       
     </script>
 
 </body>

@@ -6,15 +6,14 @@ function theFunction() {
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'starWarsCast2.json', true);
     ourRequest.onload = function () {
-        var ourData = JSON.parse(ourRequest.responseText);
+        var myData = JSON.parse(ourRequest.responseText);
         var someContent = " ";
-        console.log(ourData[0]);
         // newFunction(ourData);
-        for(i = 0; i < ourData.length; i ++){
-            someContent = "<ul>" +  ourData[i].title + "</ul>" + "<p> The Best Character in that movie was    " + ourData[i].Casting.bestChar +"</p>";
+        for(i = 0; i < myData.length; i ++){
+            someContent = "<ul>" +  myData[i].title + "</ul>" + "<p> The Best Character in that movie was    " + myData[i].Casting.bestChar +"</p>";
             theContainer[0].insertAdjacentHTML('beforeend',someContent);
         }
-
+        console.log(myData);
     }
     ourRequest.send();
 };
