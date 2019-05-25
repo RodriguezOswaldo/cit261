@@ -1,0 +1,23 @@
+body{
+    background-color: #999;
+    text-align:center;
+}
+.wrapper{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+img{
+    border: 5px solid salmon;
+
+    /* transform: translate(100px, 200px); it takes two values axis X axis Y */
+    /* transform: translateX(200px);/*it moves the object right to left
+    transform: translateY(200px);it moves the object up and down */
+    /* transform: scale(1, 1); /*it makes the element wider */
+    /* transform: scaleX(1); it makes the element wider */
+    /* transform: scaleY(1); it makes the element wider*/
+    /* transform: rotateX(180deg);it rotates in its own axis */
+    /* transform: rotateZ(50deg); */
+    transform: rotateZ(-20deg) translateY(100px) scale(1.5);
+     
+} 
