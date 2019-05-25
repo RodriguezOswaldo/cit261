@@ -9,7 +9,6 @@
 <body>
     
     <script>
-           
             var myArray = [" Light", " Dark", " Shadow", " Shady", " Brilliant"];
             var myAssociativeA = [];
             myAssociativeA['Name'] = "Lucas";
@@ -23,20 +22,22 @@
             }
             console.log(myAssociativeA);
             console.log(myMotorcicle);
-            //Saving the Data in the Local Storage using SetItem function
+
+            // Saving the Data in the Local Storage using SetItem function
             localStorage.setItem('firstname', 'Oswaldo');
             localStorage.setItem('anArray', JSON.stringify(myArray));
             localStorage.setItem('favoriteSong', JSON.stringify(myAssociativeA['favoriteSong']));
             localStorage.setItem('myMotorcicle', JSON.stringify(myMotorcicle));
 
-
-            //Retrieving  Data from Local Storage using GetItem function
+            // Retrieving  Data from Local Storage using GetItem function
             var myData = JSON.parse(localStorage.getItem('favoriteSong'));
             console.table(localStorage.getItem('anArray'));
             var firstName = localStorage.getItem('firstname');
             var myMoto = JSON.parse(localStorage.getItem('myMotorcicle'));
             console.log(myMoto);
-             
+            console.log(myData);
+            console.log(firstName);
+            
             // localStorage.clear();
     </script>
 </body>
