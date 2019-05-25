@@ -12,15 +12,31 @@
            
             var myArray = [" Light", " Dark", " Shadow", " Shady", " Brilliant"];
             var myAssociativeA = [];
+            myAssociativeA['Name'] = "Lucas";
+            myAssociativeA['favoriteColor'] ="Green";
             myAssociativeA['favoriteSong'] = "Resistiré";
+            var myMotorcicle = {
+                make:"Hyunday",
+                year:2019,
+                color:"red",
+                brand:"Hyunday",
+            }
             console.log(myAssociativeA);
+            console.log(myMotorcicle);
+            //Saving the Data in the Local Storage using SetItem function
             localStorage.setItem('firstname', 'Oswaldo');
-            localStorage.setItem('anArray', myArray);
+            localStorage.setItem('anArray', JSON.stringify(myArray));
             localStorage.setItem('favoriteSong', JSON.stringify(myAssociativeA['favoriteSong']));
+            localStorage.setItem('myMotorcicle', JSON.stringify(myMotorcicle));
 
+
+            //Retrieving  Data from Local Storage using GetItem function
             var myData = JSON.parse(localStorage.getItem('favoriteSong'));
             console.table(localStorage.getItem('anArray'));
             var firstName = localStorage.getItem('firstname');
+            var myMoto = JSON.parse(localStorage.getItem('myMotorcicle'));
+            console.log(myMoto);
+             
             // localStorage.clear();
     </script>
 </body>
