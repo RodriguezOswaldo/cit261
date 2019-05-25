@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+</head>
+<body>
+    
+    <script>
+           
+            var myArray = [" Light", " Dark", " Shadow", " Shady", " Brilliant"];
+            var myAssociativeA = [];
+            myAssociativeA['favoriteSong'] = "Resistiré";
+            console.log(myAssociativeA);
+            localStorage.setItem('firstname', 'Oswaldo');
+            localStorage.setItem('anArray', myArray);
+            localStorage.setItem('favoriteSong', JSON.stringify(myAssociativeA['favoriteSong']));
+
+            var myData = JSON.parse(localStorage.getItem('favoriteSong'));
+            console.table(localStorage.getItem('anArray'));
+            var firstName = localStorage.getItem('firstname');
+            // localStorage.clear();
+    </script>
+</body>
+</html>
