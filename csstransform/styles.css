@@ -18,6 +18,6 @@ img{
     /* transform: scaleY(1); it makes the element wider*/
     /* transform: rotateX(180deg);it rotates in its own axis */
     /* transform: rotateZ(50deg); */
-    transform: rotateZ(-20deg) translateY(100px) scale(1.5);
+    /* transform: rotateZ(-20deg) translateY(100px) scale(1.5); */
      
 } 

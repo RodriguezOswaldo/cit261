@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        div#box1{
+            background: #9DCEFF;
+            width: 200px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">Content in the box 1!</div>
+    <button onclick="changeBg('box1', '#fff')">Transition!</button>
+    <button onclick="changeBg('box1', '#333')">Transition!</button>
+    <button onclick="changeBg('box1', 'red')">Transition!</button>
+    <div class="wrapper">
+        <img src="https://cdn.pixabay.com/photo/2017/09/14/11/14/water-2748660__340.png" alt="">
+    </div>
+    <script>
+        function changeBg(el, clr){
+            var elem = document.getElementById(el);
+            elem.style.transition = "background 1.0s linear 2s";
+            elem.style.background = clr;
+        }
+    </script>
+</body>
+</html>
