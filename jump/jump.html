@@ -5,7 +5,7 @@
   <title>Key Detection</title>
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 </head>
-<body>
+<body ontouchend="myFunction">
     <textarea placeholder="please type the key word jump as many times as you can, and allow the script to be ran" cols="120" rows="20"></textarea>
 <script>
 const pressed =[];
@@ -20,9 +20,9 @@ window.addEventListener('keyup', (e)=>{
   }
   console.log(pressed);
 })
-window.addEventListener('touchend', (e)=>{
+function myFunction(){
     cornify_add();
-})
+}
 // window.addEventListener('keyup', (e)=>{ this little function will print to the console what key was pressed 
 //   console.log(e.key);
 // })
