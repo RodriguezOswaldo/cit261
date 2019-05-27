@@ -10,6 +10,7 @@
 <body style="text-align:center">
   <textarea  id="run" placeholder="please type the key word jump as many times as you can, and allow the script to be ran"
     cols="20" rows="10"></textarea>
+    <div id="demo"></div>
   <script>
     const pressed = [];
     const secretCode = 'jump';
@@ -25,7 +26,8 @@
     })
     document.getElementById('run').addEventListener("touchstart", myFunction);
     function myFunction() {
-      cornify_add();
+      document.getElementById('demo').innerHTML = "Whats App!?";
+      // cornify_add();
     }
 // window.addEventListener('keyup', (e)=>{ this little function will print to the console what key was pressed 
 //   console.log(e.key);
