@@ -16,8 +16,9 @@
         }
 
         ul {
+            text-align: center;
+            font-size: 30px;
             font-weight: bolder;
-            color: yellow;
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -60,7 +61,7 @@
                 for (i = 0; i < myData.results.length; i++) {
                     someContent = "<ul>" + myData.results[i].title + "</ul>" + "<p>" + 
                         "This movie was directed by " + myData.results[i].director + "</p>" + 
-                        "<p style=\"color:green\">" + myData.results[i].opening_crawl + "</p>";
+                        "<p style=\"color:yellow; text-align:center;\">" + myData.results[i].opening_crawl + "</p>";
                     theContainer[0].insertAdjacentHTML('beforeend', someContent);
 
                     console.log(myData.results[i].title);
