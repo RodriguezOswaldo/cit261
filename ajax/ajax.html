@@ -58,7 +58,7 @@
                 var results = myData.results;
                 console.log(results);
                 for (i = 0; i < myData.results.length; i++) {
-                    someContent = "<ul>" + myData.results[i].title + "</ul>";
+                    someContent = "<ul>" + myData.results[i].title + "</ul>" + "<p>" + "This movie was directed by " + myData.results[i].director + "</p>";
                     theContainer[0].insertAdjacentHTML('beforeend', someContent);
 
                     console.log(myData.results[i].title);
