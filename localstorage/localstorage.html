@@ -17,7 +17,7 @@
             make: "Suzuki",
             year: 2019,
             color: "red",
-            brand: "Suzuki"
+            style: "Motocross"
         }
         var theColor = {
             color :"black",
@@ -33,18 +33,20 @@
         // Saving the Data in the Local Storage using SetItem function
         localStorage.setItem('notacion', musicNotes);
         localStorage.setItem('black color', JSON.stringify(theColor));
+        
+        //clearin the content from LocalStorage
+        localStorage.clear();
+
         localStorage.setItem('myMotorcicle', JSON.stringify(myMotorcicle));
 
         // Retrieving  Data from Local Storage using GetItem function
         var myMoto = JSON.parse(localStorage.getItem('myMotorcicle'));
-        var myNotes = JSON.parse(localStorage.getItem('musicNotes'));
-        var myColors = JSON.parse(localStorage.getItem('theColor'));
+    
 
         console.log(myMoto.make);
         console.log(myMoto.color);
-        console.log(myMoto.year);
+        console.log(myMoto.style);
 
-            // localStorage.clear();
            
     </script>
 </body>
