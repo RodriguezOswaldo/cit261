@@ -14,10 +14,10 @@
     <script>
         var musicNotes = ["Do", " Re", " Mi", " Fa", " So", " La", " Si", " Do"];
         var myMotorcicle = {
-            make: "Hyunday",
+            make: "Suzuki",
             year: 2019,
             color: "red",
-            brand: "Hyunday"
+            brand: "Suzuki"
         }
         var theColor = {
             color :"black",
@@ -25,6 +25,7 @@
             type : "primary",
             hexCode: "#000"
         }
+
         console.log(musicNotes);
         console.log(myMotorcicle);
         console.log(theColor);
@@ -39,7 +40,9 @@
         var myNotes = JSON.parse(localStorage.getItem('musicNotes'));
         var myColors = JSON.parse(localStorage.getItem('theColor'));
 
-        console.log(myMoto);
+        console.log(myMoto.make);
+        console.log(myMoto.color);
+        console.log(myMoto.year);
 
             // localStorage.clear();
            
