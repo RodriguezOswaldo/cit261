@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOM Manipulation</title>
     <style>
+        
         html{
             margin:50px;
             background:white;
@@ -22,6 +23,7 @@
         h2{
         text-align: center;
         text-shadow:12px #290;
+        font-size: 30px;
     }
     div{
         display: block;
@@ -33,8 +35,8 @@
     label,
     input,
     button{
-        display: inline;
-        text-align: center;
+        display: block;
+        text-align: left;
         margin:4px;
         padding: 10px;
         font-size: 20px;
@@ -70,8 +72,8 @@
       display: flex;
       flex-wrap: nowrap;
       float: right;
-      background: #781;
-    padding: 10px;
+       box-shadow:  0 1px 5px #999; 
+          padding: 10px;
   }
   .example{
       font-size:20px;
@@ -80,6 +82,18 @@
   .example1{
       text-align: left;
       color:gainsboro;
+  }
+  .exam{
+      color: gainsboro;
+  }
+  footer {
+      background: #999;
+      padding: 10px;
+      font-size: small;
+  }
+  a:hover{
+      background: #299;
+      color: aliceblue;
   }
 
     </style>
@@ -98,7 +112,7 @@
         <button onclick="addImages()">Add Images</button>
     </div>
     <div class="example1">
-            <p>Let's build the structure of a website with some random text and random images!</p>
+            <p>Let's build the structure of an "informative" website with some random text and random images!</p>
             <ul class="li">
             <li>let's type a title</li>
             <li>now let's add some text</li>
@@ -124,6 +138,9 @@
              accusamus mollitia ducimus ad consequuntur ea distinctio animi!
 
     </div>
+    <footer> 
+         <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
+    </footer>
 
     <script>
         function addContent() {
