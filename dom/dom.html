@@ -60,10 +60,9 @@
         display: none;
     }
   .title, .parra{
-      background: #781;
   }
   .parra{
-      color:#290;
+      color:#999;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -73,6 +72,10 @@
       float: right;
       background: #781;
     padding: 10px;
+  }
+  .example{
+      font-size:20px;
+      background-color: gainsboro;
   }
 
     </style>
@@ -86,11 +89,26 @@
 
         <label>Please type a title for your page</label> <input type="text" id="title">
         <button onclick="addContent()">Add Title</button><br>
-        <label>Please type some content about your page </label> <input type="text" id="addedByUser">
+        <label>Please type some content about your page <span class="exam">(You can copy an paste the string of text down there)</span> </label> <input type="text" id="addedByUser">
         <button onclick="addParagraph()">Add Content</button><br>
         <button onclick="addImages()">Add Images</button>
     </div>
+    <div class="example">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. S
+        int facilis temporibus, eum cumque id possimus similique quae
+         quaerat. Voluptates, recusandae. Iusto error corrupti facere,
+          neque harum vitae molestiae eaque! Minus ab maiores ea? 
+          Quas explicabo quae aliquid neque harum necessitatibus
+           repellendus officia alias autem eligendi repellat fuga, 
+           cupiditate provident labore recusandae voluptate laborum 
+           voluptas ducimus quibusdam aut voluptatem possimus obcaecati? 
+           Odio reprehenderit iusto alias in laudantium corrupti quaerat 
+           culpa quo enim quam reiciendis quis assumenda inventore sequi, 
+           consequatur quibusdam distinctio quas consectetur quia qui
+            eligendi itaque. Doloribus modi, rerum doloremque nisi magni,
+             accusamus mollitia ducimus ad consequuntur ea distinctio animi!
 
+    </div>
 
     <script>
         function addContent() {
