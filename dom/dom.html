@@ -109,8 +109,10 @@
         <button onclick="addContent()">Add Title</button><br>
         <label>Please type some content about your page <span class="exam">(You can copy an paste the string of text
                 down there)</span> </label> <input type="text" id="addedByUser">
-        <button onclick="addParagraph()">Add Content</button><br>
+        <button onclick="addParagraph()">Add Content</button>
+        <button onclick="deletePara()">Remove Content</button><br>
         <button onclick="addImages()">Add Images</button>
+        <button onclick="deleteImages()">Remove Images</button>
     </div>
     <div class="example1">
         <p>Let's build the structure of an "informative" website with some random text and random images!</p>
@@ -168,7 +170,6 @@
             var parra = document.createElement('p');
             parra.className = 'parra';
             parra.setAttribute('title', 'This is a paragraph');
-            console.log(parra);
             var thisText = document.getElementById('addedByUser').value;
             var newdivText = document.createTextNode(thisText);
             parra.appendChild(newdivText);
@@ -197,6 +198,21 @@
             content[0].append(img);
             clickCounter++;
         }
+
+        function deletePara(){
+            var parra = document.getElementsByClassName('parra');
+            parra[0].remove(parra);
+            // parra[0].parentNode.removeChild(parra);
+            console.log(parra);
+        }
+
+        function deleteImages(){
+            var img = document.getElementsByClassName('img');
+            img[0].remove(img);
+            // parra[0].parentNode.removeChild(parra);
+            console.log(img);
+        }
+
 
     </script>
 </body>
