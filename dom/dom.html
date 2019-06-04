@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2{
+        text-align: center;
+    }
+    label,
+    button{
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="empty"></div>
+        <label>Please add a Title</label> <input type="text" id="title">
+        <button onclick="addContent()">Add Title</button>
+        <label>Please add a paragraph</label> <input type="text" id="addedByUser">
+        <button onclick="addParagraph()">Add Content</button>
+    </div>
+
+
+    <script>
+        function addContent() {
+            //new Element
+            var newDiv = document.createElement('h2');
+            //some properties for this element
+            newDiv.className = 'title';
+            newDiv.id = "theTitle";
+            newDiv.setAttribute('title', 'This is a title');
+            //Element before that element
+            var thisText = document.getElementById('title').value;
+            console.log(thisText);
+            var newdivText = document.createTextNode(thisText);
+            newDiv.appendChild(newdivText);
+            var empty = document.getElementById('empty');
+            //Element where it will be inserted 
+            var content = document.getElementsByClassName('content');
+            //new element 
+            content[0].insertBefore(newDiv, empty);
+            console.log(newDiv);
+        }
+
+        function addParagraph() {
+            var parra = document.createElement('div');
+            parra.className = 'parra';
+            parra.setAttribute('title', 'This is a paragraph');
+            console.log(parra);
+            var thisText = document.getElementById('addedByUser').value;
+            var newdivText = document.createTextNode(thisText);
+            parra.appendChild(newdivText);
+            var before = document.getElementById('theTitle');
+            var content = document.getElementsByClassName('content');
+
+            content[0].insertBefore(parra, before); xz
+        }
+    //     function addContent(){
+    //   //Create Elements
+    //   var heading= document.createElement('h2');
+    //   var addedByUser = document.getElementById('addedByUser');
+    //   var newText = document.createTextNode(addedByUser);
+    //   heading.id = 'heading'; 
+    //   heading.appendChild(newText);
+    //   console.log(heading);
+
+    // }
+
+    </script>
+</body>
+
+</html>
