@@ -7,23 +7,88 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        html{
+            margin:50px;
+            background:white;
+        }
+        body{
+          background: #333;
+          margin-left: 40px;
+          margin-right:40px;
+          margin: auto;
+          max-width: 1200px;
+          text-align: center;
+    }
         h2{
         text-align: center;
+        text-shadow:12px #290;
+    }
+    div{
+        display: block;
+        box-shadow: 2px 2px 2px 2px gray;
+        padding: 20px;
+        margin: 10px;
+        position: relative;
     }
     label,
+    input,
     button{
-        display: block;
+        display: inline;
+        text-align: center;
+        margin:4px;
+        padding: 10px;
+        font-size: 20px;
     }
+    label {
+        font-size: 25px;
+    }
+    button{
+        font-size: 20px;
+        padding: 1px 40px;
+        border-radius: 10px;
+    }
+    button:hover{
+        background: gray;
+        color:whitesmoke;
+    }
+.theContent{
+        box-shadow: 0px;
+        padding:10;
+        margin:20;
+    }
+    #empty{
+        display: none;
+    }
+  .title, .parra{
+      background: #781;
+  }
+  .parra{
+      color:#290;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .img{
+      display: flex;
+      flex-wrap: nowrap;
+      float: right;
+      background: #781;
+    padding: 10px;
+  }
+
     </style>
 </head>
 
 <body>
     <div class="content">
-        <div id="empty"></div>
-        <label>Please add a Title</label> <input type="text" id="title">
-        <button onclick="addContent()">Add Title</button>
-        <label>Please add a paragraph</label> <input type="text" id="addedByUser">
-        <button onclick="addParagraph()">Add Content</button>
+        <div class="theContent">
+            <div id="empty"></div>
+        </div>
+
+        <label>Please type a title for your page</label> <input type="text" id="title">
+        <button onclick="addContent()">Add Title</button><br>
+        <label>Please type some content about your page </label> <input type="text" id="addedByUser">
+        <button onclick="addParagraph()">Add Content</button><br>
+        <button onclick="addImages()">Add Images</button>
     </div>
 
 
@@ -42,14 +107,13 @@
             newDiv.appendChild(newdivText);
             var empty = document.getElementById('empty');
             //Element where it will be inserted 
-            var content = document.getElementsByClassName('content');
+            var content = document.getElementsByClassName('theContent');
             //new element 
-            content[0].insertBefore(newDiv, empty);
+            content[0].append(newDiv);
             console.log(newDiv);
         }
-
         function addParagraph() {
-            var parra = document.createElement('div');
+            var parra = document.createElement('p');
             parra.className = 'parra';
             parra.setAttribute('title', 'This is a paragraph');
             console.log(parra);
@@ -57,20 +121,30 @@
             var newdivText = document.createTextNode(thisText);
             parra.appendChild(newdivText);
             var before = document.getElementById('theTitle');
-            var content = document.getElementsByClassName('content');
+            var content = document.getElementsByClassName('theContent');
 
-            content[0].insertBefore(parra, before); xz
+            content[0].append(parra);
         }
-    //     function addContent(){
-    //   //Create Elements
-    //   var heading= document.createElement('h2');
-    //   var addedByUser = document.getElementById('addedByUser');
-    //   var newText = document.createTextNode(addedByUser);
-    //   heading.id = 'heading'; 
-    //   heading.appendChild(newText);
-    //   console.log(heading);
+        var clickCounter = 1;
 
-    // }
+        function addImages() {
+            // var parra = document.createElement('div');
+            // parra.className = 'parra';
+            // parra.setAttribute('title', 'This is an image');
+            // console.log(parra);
+            var img = new Image();
+            img.className = 'img';
+            img.setAttribute('title', 'This is an image');
+
+            img.onload = function(){
+                img.appendChild(img);
+            }
+            img.src = 'https://source.unsplash.com/random/300x20'+clickCounter;
+            // var before = document.getElementById('theTitle');
+            var content = document.getElementsByClassName('theContent');
+            content[0].append(img);
+            clickCounter++;
+        }
 
     </script>
 </body>
