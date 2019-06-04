@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOM Manipulation</title>
     <style>
-        
+
         html{
-            margin:50px;
+            margin:0 40px;
             background:white;
         }
         body{
@@ -107,39 +107,41 @@
 
         <label>Please type a title for your page</label> <input type="text" id="title">
         <button onclick="addContent()">Add Title</button><br>
-        <label>Please type some content about your page <span class="exam">(You can copy an paste the string of text down there)</span> </label> <input type="text" id="addedByUser">
+        <label>Please type some content about your page <span class="exam">(You can copy an paste the string of text
+                down there)</span> </label> <input type="text" id="addedByUser">
         <button onclick="addParagraph()">Add Content</button><br>
         <button onclick="addImages()">Add Images</button>
     </div>
     <div class="example1">
-            <p>Let's build the structure of an "informative" website with some random text and random images!</p>
-            <ul class="li">
+        <p>Let's build the structure of an "informative" website with some random text and random images!</p>
+        <ul class="li">
             <li>let's type a title</li>
             <li>now let's add some text</li>
             <li>now let's add a couple images</li>
             <li>now let's repeat the last two steps several time</li>
-            
+
             <ul>
 
-        </div>
+    </div>
     <div class="example">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. S
         int facilis temporibus, eum cumque id possimus similique quae
-         quaerat. Voluptates, recusandae. Iusto error corrupti facere,
-          neque harum vitae molestiae eaque! Minus ab maiores ea? 
-          Quas explicabo quae aliquid neque harum necessitatibus
-           repellendus officia alias autem eligendi repellat fuga, 
-           cupiditate provident labore recusandae voluptate laborum 
-           voluptas ducimus quibusdam aut voluptatem possimus obcaecati? 
-           Odio reprehenderit iusto alias in laudantium corrupti quaerat 
-           culpa quo enim quam reiciendis quis assumenda inventore sequi, 
-           consequatur quibusdam distinctio quas consectetur quia qui
-            eligendi itaque. Doloribus modi, rerum doloremque nisi magni,
-             accusamus mollitia ducimus ad consequuntur ea distinctio animi!
+        quaerat. Voluptates, recusandae. Iusto error corrupti facere,
+        neque harum vitae molestiae eaque! Minus ab maiores ea?
+        Quas explicabo quae aliquid neque harum necessitatibus
+        repellendus officia alias autem eligendi repellat fuga,
+        cupiditate provident labore recusandae voluptate laborum
+        voluptas ducimus quibusdam aut voluptatem possimus obcaecati?
+        Odio reprehenderit iusto alias in laudantium corrupti quaerat
+        culpa quo enim quam reiciendis quis assumenda inventore sequi,
+        consequatur quibusdam distinctio quas consectetur quia qui
+        eligendi itaque. Doloribus modi, rerum doloremque nisi magni,
+        accusamus mollitia ducimus ad consequuntur ea distinctio animi!
 
     </div>
-    <footer> 
-         <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
+    <footer>
+        <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a
+                href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
     </footer>
 
     <script>
@@ -186,10 +188,10 @@
             img.className = 'img';
             img.setAttribute('title', 'This is an image');
 
-            img.onload = function(){
+            img.onload = function () {
                 img.appendChild(img);
             }
-            img.src = 'https://source.unsplash.com/random/300x20'+clickCounter;
+            img.src = 'https://source.unsplash.com/random/300x20' + clickCounter;
             // var before = document.getElementById('theTitle');
             var content = document.getElementsByClassName('theContent');
             content[0].append(img);
