@@ -48,6 +48,7 @@
         font-size: 20px;
         padding: 1px 40px;
         border-radius: 10px;
+        background: green;
     }
     button:hover{
         background: gray;
@@ -61,7 +62,8 @@
     #empty{
         display: none;
     }
-  .title, .parra{
+  .delete{
+      background: red;
   }
   .parra{
       color:#999;
@@ -110,9 +112,9 @@
         <label>Please type some content about your page <span class="exam">(You can copy an paste the string of text
                 down there)</span> </label> <input type="text" id="addedByUser">
         <button onclick="addParagraph()">Add Content</button>
-        <button onclick="deletePara()">Remove Content</button><br>
+        <button class="delete" onclick="deletePara()">Remove Content</button><br>
         <button onclick="addImages()">Add Images</button>
-        <button onclick="deleteImages()">Remove Images</button>
+        <button class="delete" onclick="deleteImages()">Remove Images</button>
     </div>
     <div class="example1">
         <p>Let's build the structure of an "informative" website with some random text and random images!</p>
