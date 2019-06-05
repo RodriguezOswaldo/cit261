@@ -109,7 +109,7 @@
 
         <label>Please type a title for your page</label> <input type="text" id="title">
         <button onclick="addContent()">Add Title</button><br>
-        <label>Please type some content about your page <span class="exam">(You can copy an paste the string of text
+        <label>Please type some content about your page <span class="exam">(You can copy and paste the string of text
                 down there)</span> </label> <input type="text" id="addedByUser">
         <button onclick="addParagraph()">Add Content</button>
         <button class="delete" onclick="deletePara()">Remove Content</button><br>
@@ -183,19 +183,13 @@
         var clickCounter = 1;
 
         function addImages() {
-            // var parra = document.createElement('div');
-            // parra.className = 'parra';
-            // parra.setAttribute('title', 'This is an image');
-            // console.log(parra);
             var img = new Image();
             img.className = 'img';
             img.setAttribute('title', 'This is an image');
-
             img.onload = function () {
                 img.appendChild(img);
             }
             img.src = 'https://source.unsplash.com/random/300x20' + clickCounter;
-            // var before = document.getElementById('theTitle');
             var content = document.getElementsByClassName('theContent');
             content[0].append(img);
             clickCounter++;
