@@ -65,14 +65,14 @@
             newDiv.setAttribute('title', 'This is a title');
             //Getting the Input element added by user
             var thisText = document.getElementById('title').value;
+            //Creating a reference for the Text into a variable
             var newdivText = document.createTextNode(thisText);
             //Adding the text into the h2 element
             newDiv.appendChild(newdivText);
             //Element where the new element will be created 
             var content = document.getElementsByClassName('theContent');
-            //new element 
+            //Adding the h2 with text into the content 
             content[0].append(newDiv);
-            console.log(newDiv);
         }
         function addParagraph() {
             //Creating new element
@@ -80,11 +80,15 @@
             //Adding some attributes to the element
             parra.className = 'parra';
             parra.setAttribute('title', 'This is a paragraph');
+            //Getting the Input element added by user
             var thisText = document.getElementById('addedByUser').value;
+            //Creating a reference for the Text into a variable
             var newdivText = document.createTextNode(thisText);
+            //Adding the text into the h2 element
             parra.appendChild(newdivText);
-            var before = document.getElementById('theTitle');
+            //Element where the new element will be created 
             var content = document.getElementsByClassName('theContent');
+            //adding the new element to the content
             content[0].append(parra);
         }
         var clickCounter = 1;
