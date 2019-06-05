@@ -94,30 +94,37 @@
         var clickCounter = 1;
 
         function addImages() {
+            //create a reference for an image 
             var img = new Image();
+            //adding some attributes to the element
             img.className = 'img';
             img.setAttribute('title', 'This is an image');
+            img.src = 'https://source.unsplash.com/random/200x10' + clickCounter;
+
             img.onload = function () {
+                //adding the img element as a child
                 img.appendChild(img);
             }
-            img.src = 'https://source.unsplash.com/random/200x10' + clickCounter;
+            //Element where the new element will be created 
             var content = document.getElementsByClassName('theContent');
+            //adding the img element to the content
             content[0].append(img);
+            //this click counter will change the image per click
             clickCounter++;
         }
 
         function deletePara(){
+            //Selecting the element that will be eliminated
             var parra = document.getElementsByClassName('parra');
+            //Removing the element which was referenced in the previous line
             parra[0].remove(parra);
-            // parra[0].parentNode.removeChild(parra);
-            console.log(parra);
         }
 
         function deleteImages(){
+            //Selecting the element that will be eliminated
             var img = document.getElementsByClassName('img');
+            //Removing the element which was referenced in the previous line
             img[0].remove(img);
-            // parra[0].parentNode.removeChild(parra);
-            console.log(img);
         }
 
 
