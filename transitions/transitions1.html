@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyframes & Animations</title>
+    <style>
+        body{
+            background: #333;
+        }
+        .box{
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation-name: myanimation;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes myanimation{
+            0%{
+                background-color: white;
+                left:0px;
+                top:0px;
+                border-radius: 0 0 0 0;
+            }
+            10%{
+                background-color: red;
+                left:200px;
+                top:0px;
+                border-radius: 30% 30% 0 0;
+
+            }
+            30%{
+                background-color: blue;
+                left:300px;
+                top:300px;
+                border-radius: 40% 40% 0 0;
+
+            }
+            50%{
+                background-color: gray;
+                left:0px;
+                top:300px;
+                border-radius: 50% 50% 50% 0;
+
+            }
+            70%{
+                background-color: aqua;
+                left:0px;
+                top:80px;
+                border-radius: 70% 70% 70% 70%;
+
+            }
+            80%{
+                background-color: blueviolet;
+                left: 10px;
+                top:100px;
+                border-radius: 20% 20% 30% 20%;
+
+            }
+            100%{
+                background-color: white;
+                left:40px;
+                top:400px;
+                border-radius: 10% 10% 0 0;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+
+    </div>
+
+
+</body>
+
+</html>
