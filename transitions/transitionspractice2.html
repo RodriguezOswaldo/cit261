@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                background: #555;
+            }
+            .box{
+                background: #678;
+                width: 300px;
+                height: 300px;
+                position: relative;
+                margin: auto;
+                top: 200px;
+                transition-property: background, border-radius, transform;
+                transition-duration: 3s;
+                /* transition-duration: 1s,3s, 3s; */
+                /* transition-delay: 2s, 1s; */
+                transition-timing-function: ease-in-out;
+            }
+            .box:hover{
+                background: red;
+                border-radius: 50%;
+                transform: rotateX(180deg);
+            }
+    </style>
+</head>
+<body>
+    <!--/* 
+TRANSITIONAL PROPERTIES
+-Properties that have an identifiable halfway point
+
+background-color 
+background-position 
+border-color 
+border-width 
+border-spacing 
+bottom 
+color
+font-size 
+font-weight 
+height left 
+letter-spacing 
+line-height 
+margin 
+max-height 
+max-width 
+min-height 
+min-width 
+opacity 
+outline-color 
+outline-offset 
+outline-width 
+padding right 
+text-indent 
+text-shadow 
+top 
+vertical-align 
+visibility 
+width 
+word-spacing 
+z-index */-->
+    <div class="box"></div>
+    
+</body>
+</html>
