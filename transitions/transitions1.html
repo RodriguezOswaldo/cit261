@@ -17,8 +17,25 @@
             position: relative;
             animation-name: myanimation;
             animation-duration: 6s;
+            /* animation-delay: 2s; */
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
+            animation-timing-function: linear;/* how it starts and ends the animation*/
+            animation-fill-mode: forwards;/*the animation states*/
+        }
+        .box2{
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation-name: myanimation;
+            animation-duration: 6s;
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: linear;/* how it starts and ends the animation*/
+            animation-fill-mode: forwards;/*the animation states*/
+            text-align: justify;
         }
         @keyframes myanimation{
             0%{
@@ -26,12 +43,14 @@
                 left:0px;
                 top:0px;
                 border-radius: 0 0 0 0;
+                margin: 30px;
             }
             10%{
                 background-color: red;
                 left:200px;
                 top:0px;
                 border-radius: 30% 30% 0 0;
+                margin: 50px;
 
             }
             30%{
@@ -39,6 +58,7 @@
                 left:300px;
                 top:300px;
                 border-radius: 40% 40% 0 0;
+                margin: 80px;
 
             }
             50%{
@@ -46,6 +66,8 @@
                 left:0px;
                 top:300px;
                 border-radius: 50% 50% 50% 0;
+                margin: 130px;
+
 
             }
             70%{
@@ -53,6 +75,8 @@
                 left:0px;
                 top:80px;
                 border-radius: 70% 70% 70% 70%;
+                margin: 200px;
+
 
             }
             80%{
@@ -60,6 +84,8 @@
                 left: 10px;
                 top:100px;
                 border-radius: 20% 20% 30% 20%;
+                margin: 280px;
+
 
             }
             100%{
@@ -67,6 +93,7 @@
                 left:40px;
                 top:400px;
                 border-radius: 10% 10% 0 0;
+                margin:380px;
 
             }
         }
@@ -78,7 +105,9 @@
 
 
     </div>
+    <div class="box2">
 
+    </div>
 
 </body>
 
