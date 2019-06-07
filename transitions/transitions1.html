@@ -9,6 +9,7 @@
     <style>
         body{
             background: #333;
+            display: flex;        
         }
         .box{
             background: white;
@@ -28,6 +29,20 @@
             width: 200px;
             height: 200px;
             position: relative;
+            animation-name: myanimation2;
+            animation-duration: 6s;
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: linear;/* how it starts and ends the animation*/
+            animation-fill-mode: forwards;/*the animation states*/
+            transform: translate(100, 100);
+        }
+        .box3{
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
             animation-name: myanimation;
             animation-duration: 6s;
             /* animation-delay: 2s; */
@@ -35,7 +50,6 @@
             animation-direction: alternate-reverse;
             animation-timing-function: linear;/* how it starts and ends the animation*/
             animation-fill-mode: forwards;/*the animation states*/
-            right:0;
         }
         @keyframes myanimation{
             0%{
@@ -96,6 +110,73 @@
                 margin:380px;
 
             }
+            
+        }
+        @keyframes myanimation2{
+            0%{
+                background-color: white;
+                left:40px;
+                top:400px;
+                border-radius: 10% 10% 0 0;
+                margin:380px;
+            }
+            10%{
+                background-color: red;
+                
+
+                left: 10px;
+                top:100px;
+                border-radius: 20% 20% 30% 20%;
+                margin: 280px;
+
+            }
+            30%{
+                background-color: blue;
+                
+                left:0px;
+                top:80px;
+                border-radius: 70% 70% 70% 70%;
+                margin: 200px;
+
+            }
+            50%{
+                background-color: gray;
+                left:0px;
+                top:300px;
+                border-radius: 50% 50% 50% 0;
+                margin: 130px;
+
+
+            }
+            70%{
+                background-color: aqua;
+                left:300px;
+                top:300px;
+                border-radius: 40% 40% 0 0;
+                margin: 80px;
+                
+
+
+            }
+            80%{
+                background-color: blueviolet;
+                left:200px;
+                top:0px;
+                border-radius: 30% 30% 0 0;
+                margin: 50px;
+                
+
+
+            }
+            100%{
+                background-color: white;
+                
+                left:0px;
+                top:0px;
+                border-radius: 0 0 0 0;
+                margin-right: 30px;
+
+            }
         }
     </style>
 </head>
@@ -106,6 +187,9 @@
 
     </div>
     <div class="box2">
+
+    </div>
+    <div class="box3">
 
     </div>
 
