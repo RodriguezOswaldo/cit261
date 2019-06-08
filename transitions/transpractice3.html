@@ -127,8 +127,39 @@
 
           
         });
+        secondIcon.addEventListener("touchstart", function () {
+            // div.style.display = "none";
+            secondIcon.style.animation = "icons 0.7s steps(5) infinite";
+        });
+        thirdIcon.addEventListener("touchstart", function () {
+            console.log("touching!");
+            // div.style.display = "none";
+            thirdIcon.style.animation = "icons 0.3s steps(5) infinite";
+            thirdIcon.style.transition = "height 0.3s linear 1s";
+            thirdIcon.style.height = '180px';
+        });
+        fourthIcon.addEventListener("touchstart", function () {
+            console.log("touching!");
+            // div.style.display = "none";
+            fourthIcon.style.animation = "icons 0.7s steps(5) infinite";
+            fourthIcon.style.transition = "background-color 0.6s linear 1s";
+            fourthIcon.style.backgroundColor = 'green';
+        });
+        fifthIcon.addEventListener("touchstart", function () {
+            // div.style.display = "none";
+            fifthIcon.style.animation = "icons 0.7s steps(4) infinite";
+            fifthIcon.style.transition = "transform 0.6s linear 1s";
+            fifthIcon.style.transform = 'rotateY(180deg) scale(1.2)';
+        });
+        sixthIcon.addEventListener("touchstart", function () {
+            console.log("touching!");
+            // div.style.display = "none";
+            sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
+            sixthIcon.style.opacity = "0.2";   
 
-
+          
+        });
+        
         
         
 
