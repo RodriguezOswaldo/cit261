@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            background: white; 
+        }
+        body{
+            padding:20px;
+            max-width: 900px;
+            text-align: center;
+            background: #999;
+            margin-right:auto;
+            margin-left:auto;
+        }
+        .box{
+            background: url('images/face.png');
+        }
+        .box, .box2, .box3, .box4, .box5, .box6{
+            width: 900px;
+            height: 60px;
+            animation: icons 0.7s steps(6) infinite;
+        }
+        .box2{
+            background: url('images/instagram.png');
+            animation: icons 0.7s steps(6) infinite;
+           
+        }
+        .box3{
+            background: url('images/linke.png');
+          
+        }
+        .box4{
+            background: url('images/twitter.png');
+       
+        }
+        .box5{
+            background: url('images/whatsapp.png');
+
+        }
+        .box6{
+            background: url('images/youtube.png');
+   
+        }
+        @keyframes icons{ 
+            0%{background-position: 0px;}
+            100%{background-position: -300px;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="icon1" class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+
+    <style>
+        icon1.addEventListener("hover", function(){
+
+        });
+    </style>
+
+
+</body>
+</html>
