@@ -57,15 +57,16 @@
         }
 
         .box6 {
-            background: url('images/youtube.png');
+            background: url('images/youtube.png'); 
+            transition: box-shadow 2s;
+            box-shadow: none;
         }
 
         @keyframes icons {
-            0% {
+            from{
                 background-position: 0px;
             }
-
-            100% {
+            to {
                 background-position: -300px;
             }
         }
@@ -110,7 +111,7 @@
         fourthIcon.addEventListener("click", function () {
             console.log("touching!");
             // div.style.display = "none";
-            fourthIcon.style.animation = "icons 0.7s steps(3) infinite";
+            fourthIcon.style.animation = "icons 0.7s steps(5) infinite";
             fourthIcon.style.transition = "background-color 0.6s linear 1s";
             fourthIcon.style.backgroundColor = 'green';
         });
@@ -124,7 +125,9 @@
             console.log("touching!");
             // div.style.display = "none";
             sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
-            sixthIcon.style.opacity = "0.2";
+            sixthIcon.style.transition = "box-shadow 3s linear 1s";
+            sixthIcon.style.boxShadow = '0 2px 2px red; ';
+
         });
 
 
