@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #icon1 {
+            background: url('images/face.png');
+            width:50px;
+            height: 50px;
+            /* animation: icons 0.7s steps(6) infinite; */
+        }
+
+        @keyframes icons {
+            from {
+                background-position: 0px;
+            }
+
+            to {
+                background-position: -300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="icon1"></div>
+    <button id="startbtn">startbtn</button>
+    <button id="stopbtn">stopbtn</button>
+    <script>
+        startbtn.addEventListener('click', function(){
+            icon1.style.animation = "icons 0.7s steps(6) infinite";
+        });
+        stopbtn.addEventListener('click', function(){
+            icon1.style.animation = "";
+        });
+    </script>
+</body>
+
+</html>

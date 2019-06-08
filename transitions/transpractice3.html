@@ -22,6 +22,12 @@
             background: url('images/face.png');
             animation: icons 0.7s steps(6) infinite;
         }
+        #stop{
+            font-size: 20px;
+            border: 2px solid #555;
+            background-color: #234;
+            color:snow;
+        }
         .box,
         .box2,
         .box3,
@@ -73,6 +79,7 @@
         <div id="icon5" class="box5 box"></div>
         <div id="icon6" class="box6 box"></div>
     </div>
+    <button id="stop">Stop Animation</button>
     <script>
         let firstIcon = document.getElementById('icon1');
         let secondIcon = document.getElementById('icon2');
@@ -80,6 +87,7 @@
         let fourthIcon = document.getElementById('icon4');
         let fifthIcon = document.getElementById('icon5');
         let sixthIcon = document.getElementById('icon6');
+        let btn = document.getElementById('stop');
         console.log(firstIcon);
 
         firstIcon.addEventListener("click", function () {
@@ -146,7 +154,14 @@
             sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
             sixthIcon.style.opacity = "0.2";   
         });
-        
+        btn.addEventListener("click", function () {
+            secondIcon.style.animation = "";
+            thirdIcon.style.animation = "";
+            fourthIcon.style.animation = "";
+            fifthIcon.style.animation = "";
+            sixthIcon.style.animation = "";
+        });
+
         
         
 
