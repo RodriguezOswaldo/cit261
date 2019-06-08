@@ -1,72 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        html{
-            background: white; 
+        html {
+            background: white;
         }
-        body{
-            padding:20px;
-            max-width: 900px;
+
+        body {
+            padding: 20px;
+            max-width: 1200px;
             text-align: center;
             background: #999;
-            margin-right:auto;
-            margin-left:auto;
+            margin-right: auto;
+            margin-left: auto;
         }
-        .box{
+
+        .box {
             background: url('images/face.png');
         }
-        .box, .box2, .box3, .box4, .box5, .box6{
-            width: 900px;
-            height: 60px;
-            animation: icons 0.7s steps(6) infinite;
-        }
-        .box2{
-            background: url('images/instagram.png');
-            animation: icons 0.7s steps(6) infinite;
-           
-        }
-        .box3{
-            background: url('images/linke.png');
-          
-        }
-        .box4{
-            background: url('images/twitter.png');
-       
-        }
-        .box5{
-            background: url('images/whatsapp.png');
 
+        .box,
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6 {
+            width: 1200px;
+            height: 60px;
+            /* animation: icons 0.7s steps(6) infinite; */
         }
-        .box6{
+
+        .box2 {
+            background: url('images/instagram.png');
+            transition: opacity 2s;
+            opacity: 1;
+        }
+
+        .box3 {
+            background: url('images/linke.png');
+        }
+
+        .box4 {
+            background: url('images/twitter.png');
+            transition: margin 2s;
+            margin: 0;
+        }
+
+        .box5 {
+            background: url('images/whatsapp.png');
+            transition: transform 2s infinite;
+        }
+
+        .box6 {
             background: url('images/youtube.png');
-   
         }
-        @keyframes icons{ 
-            0%{background-position: 0px;}
-            100%{background-position: -300px;}
+
+        @keyframes icons {
+            0% {
+                background-position: 0px;
+            }
+
+            100% {
+                background-position: -300px;
+            }
         }
-        
     </style>
 </head>
+
 <body>
-    <div id="icon1" class="box"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
-    <div class="box4"></div>
-    <div class="box5"></div>
-    <div class="box6"></div>
+    <div id="container">
+        <div id="icon1" class="box"></div>
+        <div id="icon2" class="box2 box"></div>
+        <div id="icon3" class="box3 box"></div>
+        <div id="icon4" class="box4 box"></div>
+        <div id="icon5" class="box5 box"></div>
+        <div id="icon6" class="box6 box"></div>
+    </div>
+    <button onclick="button()">Run the Loop</button>
+    <script>
+        let firstIcon = document.getElementById('icon1');
+        let secondIcon = document.getElementById('icon2');
+        let thirdIcon = document.getElementById('icon3');
+        let fourthIcon = document.getElementById('icon4');
+        let fifthIcon = document.getElementById('icon5');
+        let sixthIcon = document.getElementById('icon6');
+        console.log(firstIcon);
 
-    <style>
-        icon1.addEventListener("hover", function(){
-
+        firstIcon.addEventListener("click", function () {
+            // div.style.display = "none";
+            firstIcon.style.animation = "icons 0.7s steps(6) infinite";
         });
-    </style>
+        secondIcon.addEventListener("click", function () {
+            // div.style.display = "none";
+            secondIcon.style.animation = "icons 0.7s steps(5) infinite";
+            secondIcon.style.opacity = "0.2";
+        });
+        thirdIcon.addEventListener("click", function () {
+            console.log("touching!");
+            // div.style.display = "none";
+            thirdIcon.style.animation = "icons 0.3s steps(5) infinite";
+            thirdIcon.style.transition = "height 0.3s linear 1s";
+            thirdIcon.style.height = '180px';
+        });
+        fourthIcon.addEventListener("click", function () {
+            console.log("touching!");
+            // div.style.display = "none";
+            fourthIcon.style.animation = "icons 0.7s steps(3) infinite";
+            fourthIcon.style.transition = "background-color 0.6s linear 1s";
+            fourthIcon.style.backgroundColor = 'green';
+        });
+        fifthIcon.addEventListener("click", function () {
+            // div.style.display = "none";
+            fifthIcon.style.animation = "icons 0.7s steps(4) infinite";
+            fifthIcon.style.transition = "transform 0.6s linear 1s";
+            fifthIcon.style.transform = 'rotateY(180deg) scale(1.2)';
+        });
+        sixthIcon.addEventListener("click", function () {
+            console.log("touching!");
+            // div.style.display = "none";
+            sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
+            sixthIcon.style.opacity = "0.2";
+        });
+
+
+        
+        
+
+
+
+    </script>
 
 
 </body>
+
 </html>
