@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triggering CSS with JS</title>
+    <style>
+        .box{
+            background:#9dceff;
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 50px;
+            left: -400px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeBG('box', '#f0f')">Color</button>
+    <button onclick="changeBG('box', 'Green')">Green</button>
+    <button onclick="changeBG('box', '#9dceff')">original</button>
+    <button onclick="fadeOut('box')">Fade Out</button>
+    <button onclick="fadeIn('box')">Fade In</button>
+    <button onclick="slideOpen('box')">Slide Open</button>
+    <button onclick="slideClose('box')">Slide Close</button>
+    <button onclick="slideIn('box')">Slide In</button>
+    <button onclick="slideOut('box')">Slide Out</button>
+
+    <div class="box" id='box'>Some content</div>
+    <script>
+    function changeBG(element, color){
+        var element = document.getElementById('box');
+        element.style.transition = "background 0.3s linear 1s";
+        element.style.background = color;
+    }
+    function fadeOut(element){
+        var element = document.getElementById('box');
+        element.style.transition = "opacity 0.4s linear 1s";
+        element.style.opacity = 0;
+    }
+    function fadeIn(element){
+        var element = document.getElementById('box');
+        element.style.transition = "opacity 0.3s linear 1s";
+        element.style.opacity = 1;
+    }
+    function slideOpen(element){
+        var element = document.getElementById('box');
+        element.style.transition = "height 0.3s linear 1s";
+        element.style.height = '200px';
+    }
+    function slideClose(element){
+        var element = document.getElementById('box');
+        element.style.transition = "height 0.3s linear 1s";
+        element.style.height = '0';
+    }
+    function slideIn(element){
+        var element = document.getElementById('box');
+        element.style.transition = "left 1.0s linear 1s";
+        element.style.left = '0';
+    }
+    function slideOut(element){
+        var element = document.getElementById('box');
+        element.style.transition = "left 1.0s linear 1s content 0";
+        element.style.left = '-400px';
+    }
+    </script>
+</body>
+</html>

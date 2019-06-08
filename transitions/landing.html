@@ -35,8 +35,11 @@
         animation-iteration-count: infinite;
     }
     @keyframes heading{
-        0%{top: -50px}
-        100%{top: 200px}
+        0%{top: 0px; font-size: 50px;}
+        25%{top: 50px; font-size: 60px;}
+        50%{top: 200px; font-size: 70px;}
+        75%{top:50px; font-size: 60px;}
+        100%{top: 0px; font-size: 50px;}
     }
     #content{
         position: relative;
@@ -48,6 +51,28 @@
     @keyframes content{
         0%{left: -150px}
         100%{left: 0}
+    }
+    .btn{
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding:1rem 2rem;
+        border:#fff 1px solid;
+        opacity:0;
+        animation-name: btn;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        margin:20px;
+        transition-property: transform;
+        transition-duration: 1s;
+    }
+    .btn:hover{
+        transform: rotateX(180deg);
+    }
+    @keyframes btn{
+        0%{opacity:0}
+        100%{opacity: 1}
     }
     </style>
 </head>
@@ -62,7 +87,11 @@
          t enim saepe. Lorem ipsum dolor sit, amet c
          onsectetur adipisicing elit. Provident, atque
           distinctio. Sit inventore obcaecati ipsa cumque
-           ipsam adipisci debitis enim.
+           ipsam adipisci debitis enim. Lorem ipsum dolor sit 
+           amet, c  onsectetur adipisicing elit. 
+           Deleniti vel non nisi   earum iure officia exercita
+           tionem doloremque
+     tenetur laboriosam dignissimos.
     </div>
     <a href="#" class="btn">Read More...</a>
 </body>
