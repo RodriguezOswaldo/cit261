@@ -20,8 +20,9 @@
             margin-left: auto;
         }
 
-        .box {
+        #icon1 {
             background: url('images/face.png');
+            animation: icons 0.7s steps(6) infinite;
         }
 
         .box,
@@ -37,8 +38,7 @@
 
         .box2 {
             background: url('images/instagram.png');
-            transition: opacity 2s;
-            opacity: 1;
+            
         }
 
         .box3 {
@@ -58,8 +58,8 @@
 
         .box6 {
             background: url('images/youtube.png'); 
-            transition: box-shadow 2s;
-            box-shadow: none;
+            transition: opacity 2s;
+            opacity: 1;
         }
 
         @keyframes icons {
@@ -82,7 +82,6 @@
         <div id="icon5" class="box5 box"></div>
         <div id="icon6" class="box6 box"></div>
     </div>
-    <!-- <button onclick="button()">Run the Loop</button> -->
     <script>
         let firstIcon = document.getElementById('icon1');
         let secondIcon = document.getElementById('icon2');
@@ -99,7 +98,6 @@
         secondIcon.addEventListener("click", function () {
             // div.style.display = "none";
             secondIcon.style.animation = "icons 0.7s steps(5) infinite";
-            secondIcon.style.opacity = "0.2";
         });
         thirdIcon.addEventListener("click", function () {
             console.log("touching!");
@@ -125,9 +123,9 @@
             console.log("touching!");
             // div.style.display = "none";
             sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
-            sixthIcon.style.transition = "box-shadow 3s linear 1s";
-            sixthIcon.style.boxShadow = '0 2px 2px red; ';
+            sixthIcon.style.opacity = "0.2";   
 
+          
         });
 
 
