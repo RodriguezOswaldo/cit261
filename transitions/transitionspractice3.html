@@ -14,18 +14,34 @@
             top: 50px;
             left: -400px;
         }
+        button:link{
+
+        }
+        button:valid{
+
+        }
+        button:focus{
+
+        }
+        button:hover{
+            background: yellow;
+
+        }
+        button:active{
+            background: #9dceff;
+        }
     </style>
 </head>
 <body>
-    <button onclick="changeBG('box', '#f0f')">Color</button>
-    <button onclick="changeBG('box', 'Green')">Green</button>
-    <button onclick="changeBG('box', '#9dceff')">original</button>
-    <button onclick="fadeOut('box')">Fade Out</button>
-    <button onclick="fadeIn('box')">Fade In</button>
-    <button onclick="slideOpen('box')">Slide Open</button>
-    <button onclick="slideClose('box')">Slide Close</button>
     <button onclick="slideIn('box')">Slide In</button>
     <button onclick="slideOut('box')">Slide Out</button>
+    <button onclick="fadeIn('box')">Fade In</button>
+    <button onclick="fadeOut('box')">Fade Out</button>
+    <button onclick="slideOpen('box')">Slide Open</button>
+    <button onclick="slideClose('box')">Slide Close</button>
+    <button onclick="changeBG('box', '#f0f')">Magenta</button>
+    <button onclick="changeBG('box', 'Green')">Green</button>
+    <button onclick="changeBG('box', '#9dceff')">Original</button>
 
     <div class="box" id='box'>Some content</div>
     <script>
@@ -56,12 +72,12 @@
     }
     function slideIn(element){
         var element = document.getElementById('box');
-        element.style.transition = "left 1.0s linear 1s";
+        element.style.transition = "left 0.3s linear 1s";
         element.style.left = '0';
     }
     function slideOut(element){
         var element = document.getElementById('box');
-        element.style.transition = "left 1.0s linear 1s content 0";
+        element.style.transition = "left 0.3s linear 1s content 0";
         element.style.left = '-400px';
     }
     </script>
