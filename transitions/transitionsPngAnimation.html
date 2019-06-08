@@ -7,10 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        body{
+            max-width: 220px;
+            margin-right: auto;
+            margin-left: auto;
+        }
         #icon1 {
-            background: url('images/face.png');
-            width:50px;
-            height: 50px;
+            margin-top:20px;
+            text-align: center;
+            background: url('images/image3.png');
+            width:150px;
+            height: 250px;
             /* animation: icons 0.7s steps(6) infinite; */
         }
 
@@ -18,9 +25,8 @@
             from {
                 background-position: 0px;
             }
-
             to {
-                background-position: -300px;
+                background-position: -1400px;
             }
         }
     </style>
@@ -32,7 +38,7 @@
     <button id="stopbtn">stopbtn</button>
     <script>
         startbtn.addEventListener('click', function(){
-            icon1.style.animation = "icons 0.7s steps(6) infinite";
+            icon1.style.animation = "icons 0.7s steps(8) infinite";
         });
         stopbtn.addEventListener('click', function(){
             icon1.style.animation = "";
