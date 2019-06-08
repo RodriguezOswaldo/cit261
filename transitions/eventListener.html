@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events!</title>
+</head>
+<body>
+    <p>
+        <button id="btn">Button</button>
+    </p>
+    <p>
+        <a href="https://www.google.com/" id="link" target="_blank">Google</a>
+    </p>
+    <p>
+        <input type="text" id="text">
+    </p>
+
+    <script>
+
+        let btn = document.getElementById('btn');
+        let link = document.getElementById('link');
+        let text = document.getElementById('text');
+
+        btn.addEventListener('click', buttonClicked);
+        function buttonClicked(e){
+            console.log(e.type, e.target, e.currentTarget);
+        }
+        link.addEventListener('click', e => {
+            e.preventDefault(); // if it is a link it would send the user to a page,prevent defaul would prevent that to happen.
+            console.log(e.type, e.target);
+        });
+        text.addEventListener('input', e =>{
+            console.log(e.type, e.target, e.target.value);
+        });
+        text.addEventListener('change', function(e){
+            console.log(e.type, e.target, e.target.value);
+        });
+//         link.addEventListener('click', linkClicked);
+//         function linkClicked(e){
+//             e.preventDefault(); // if it is a link it would send the user to a page,prevent defaul would prevent that to happen.
+//             console.log(e.type, e.target, e.currentTarget);
+//         } 
+
+        /* cool stuf aboout eventListener 
+        myDiv.addEventListener('click', doSomething);
+
+        function doSomething(e){
+            console.log( e.type);//Type of event
+            console.log( e.target); //What was clicked on, what was the target.
+        }
+    */
+    </script>
+</body>
+</html>
