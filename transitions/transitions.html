@@ -88,86 +88,63 @@
     </div>
     <button id="stop">Stop Animation</button>
     <script>
-        let firstIcon = document.getElementById('icon1');
-        let secondIcon = document.getElementById('icon2');
-        let thirdIcon = document.getElementById('icon3');
-        let fourthIcon = document.getElementById('icon4');
-        let fifthIcon = document.getElementById('icon5');
-        let sixthIcon = document.getElementById('icon6');
         let btn = document.getElementById('stop');
-        console.log(firstIcon);
 
-        firstIcon.addEventListener("click", function () {
-            // div.style.display = "none";
+        // Event Listeners
+        icon1.addEventListener("click", function () {
             firstIcon.style.animation = "icons 0.7s steps(6) infinite";
         });
-        secondIcon.addEventListener("click", function () {
-            // div.style.display = "none";
-            secondIcon.style.animation = "icons 0.7s steps(5) infinite";
+        icon2.addEventListener("click", function () {
+            icon2.style.animation = "icons 0.7s steps(5) infinite";
         });
-        thirdIcon.addEventListener("click", function () {
-            console.log("touching!");
-            // div.style.display = "none";
-            thirdIcon.style.animation = "icons 0.3s steps(5) infinite";
-            thirdIcon.style.transition = "height 0.3s linear 1s";
-            thirdIcon.style.height = '180px';
+        icon3.addEventListener("click", function () {
+            icon3.style.animation = "icons 0.3s steps(5) infinite";
+            icon3.style.transition = "height 0.3s linear 1s";
+            icon3.style.height = '180px';
         });
-        fourthIcon.addEventListener("click", function () {
-            console.log("touching!");
-            // div.style.display = "none";
-            fourthIcon.style.animation = "icons 0.7s steps(5) infinite";
-            fourthIcon.style.transition = "background-color 0.6s linear 1s";
-            fourthIcon.style.backgroundColor = 'green';
+        icon4.addEventListener("click", function () {
+            icon4.style.animation = "icons 0.7s steps(5) infinite";
+            icon4.style.transition = "background-color 0.6s linear 1s";
+            icon4.style.backgroundColor = 'green';
         });
-        fifthIcon.addEventListener("click", function () {
-            // div.style.display = "none";
-            fifthIcon.style.animation = "icons 0.7s steps(4) infinite";
-            fifthIcon.style.transition = "transform 0.6s linear 1s";
-            fifthIcon.style.transform = 'rotateY(180deg) scale(1.2)';
+        icon5.addEventListener("click", function () {
+            icon5.style.animation = "icons 0.7s steps(4) infinite";
+            icon5.style.transition = "transform 0.6s linear 1s";
+            icon5.style.transform = 'rotateY(180deg) scale(1.2)';
         });
-        sixthIcon.addEventListener("click", function () {
-            console.log("touching!");
-            // div.style.display = "none";
-            sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
-            sixthIcon.style.opacity = "0.2";   
+        icon6.addEventListener("click", function () {
+            icon6.style.animation = "icons 0.7s steps(5) infinite";
+            icon6.style.opacity = "0.2";   
         });
-        secondIcon.addEventListener("touchstart", function () {
-            // div.style.display = "none";
-            secondIcon.style.animation = "icons 0.7s steps(5) infinite";
+        icon2.addEventListener("touchstart", function () {
+            icon2.style.animation = "icons 0.7s steps(5) infinite";
         });
-        thirdIcon.addEventListener("touchstart", function () {
-            console.log("touching!");
-            // div.style.display = "none";
-            thirdIcon.style.animation = "icons 0.3s steps(5) infinite";
-            thirdIcon.style.transition = "height 0.3s linear 1s";
-            thirdIcon.style.height = '180px';
+        icon3.addEventListener("touchstart", function () {
+            icon3.style.animation = "icons 0.3s steps(5) infinite";
+            icon3.style.transition = "height 0.3s linear 1s";
+            icon3.style.height = '180px';
         });
-        fourthIcon.addEventListener("touchstart", function () {
-            console.log("touching!");
-            // div.style.display = "none";
-            fourthIcon.style.animation = "icons 0.7s steps(5) infinite";
-            fourthIcon.style.transition = "background-color 0.6s linear 1s";
-            fourthIcon.style.backgroundColor = 'green';
+        icon4.addEventListener("touchstart", function () {
+            icon4.style.animation = "icons 0.7s steps(5) infinite";
+            icon4.style.transition = "background-color 0.6s linear 1s";
+            icon4.style.backgroundColor = 'green';
         });
-        fifthIcon.addEventListener("touchstart", function () {
-            // div.style.display = "none";
-            fifthIcon.style.animation = "icons 0.7s steps(4) infinite";
-            fifthIcon.style.transition = "transform 0.6s linear 1s";
-            fifthIcon.style.transform = 'rotateY(180deg) scale(1.2)';
+        icon5.addEventListener("touchstart", function () {
+            icon5.style.animation = "icons 0.7s steps(4) infinite";
+            icon5.style.transition = "transform 0.6s linear 1s";
+            icon5.style.transform = 'rotateY(180deg) scale(1.2)';
         });
-        sixthIcon.addEventListener("touchstart", function () {
-            console.log("touching!");
-            // div.style.display = "none";
-            sixthIcon.style.animation = "icons 0.7s steps(5) infinite";
-            sixthIcon.style.opacity = "0.2";   
+        icon6.addEventListener("touchstart", function () {
+            icon6.style.animation = "icons 0.7s steps(5) infinite";
+            icon6.style.opacity = "0.2";   
         });
         btn.addEventListener("click", function () {
-            firstIcon.style.animation = "";
-            secondIcon.style.animation = "";
-            thirdIcon.style.animation = "";
-            fourthIcon.style.animation = "";
-            fifthIcon.style.animation = "";
-            sixthIcon.style.animation = "";
+            icon1.style.animation = "";
+            icon2.style.animation = "";
+            icon3.style.animation = "";
+            icon4.style.animation = "";
+            icon5.style.animation = "";
+            icon6.style.animation = "";
         });
 
         
