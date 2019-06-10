@@ -93,10 +93,13 @@
         icon1.addEventListener("click", function () {
             firstIcon.style.animation = "icons 0.7s steps(6) infinite";
         });
-        icon2.addEventListener("click", function () {
+        icon2.addEventListener("dblclick", function () {
             icon2.style.animation = "icons 0.7s steps(5) infinite";
         });
-        icon3.addEventListener("click", function () {
+        window.addEventListener("resize", function () {
+            container.style.backgroundColor = "#40A17D";
+        });
+        icon3.addEventListener("mouseover", function () {
             icon3.style.animation = "icons 0.3s steps(5) infinite";
             icon3.style.transition = "height 0.3s linear 1s";
             icon3.style.height = '180px';
