@@ -89,11 +89,14 @@
     <button id="stop">Stop Animation</button>
     <script>
         let btn = document.getElementById('stop');
+
         // Event Listeners that will catch the user's events and launch the animations.
-        icon1.addEventListener("click", function () {
-            firstIcon.style.animation = "icons 0.7s steps(6) infinite";
-        });
-        icon2.addEventListener("dblclick", function () {
+        // icon1.addEventListener("load", function () {
+        //     icon1.style.animation = "icons 0.7s steps(6) infinite";
+        // });
+        // window.onload(icon1.style.animation = "icons 0.7s steps(6) infinite");
+
+        icon2.addEventListener("dblclick", function() {
             icon2.style.animation = "icons 0.7s steps(5) infinite";
         });
         window.addEventListener("resize", function () {
@@ -114,7 +117,8 @@
             icon5.style.transition = "transform 0.6s linear 1s";
             icon5.style.transform = 'rotateX(180deg) scale(1.2)';
         });
-        icon6.addEventListener("click", function () {
+        icon6.addEventListener("click", function (e) {
+            console.log(e.type);
             icon6.style.animation = "icons 0.7s steps(6) infinite";
             icon6.style.opacity = "0.2";   
         });
