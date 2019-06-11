@@ -93,6 +93,7 @@
             icon2.style.animation = "icons 0.7s steps(5) infinite";
         });
         window.addEventListener("resize", function () {
+            container.style.transition = " background-color 0.6s linear 1s";
             container.style.backgroundColor = "#40A17D";
         });
         icon3.addEventListener("mouseover", function () {
@@ -124,7 +125,7 @@
             icon3.style.transition = "height 0.3s linear 1s";
             icon3.style.height = '180px';
         });
-        
+
         icon4.addEventListener("touchmove", function () {
             icon4.style.animation = "icons 0.7s steps(6) infinite";
             icon4.style.transition = "background-color 0.6s linear 1s";
