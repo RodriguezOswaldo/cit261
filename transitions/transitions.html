@@ -119,12 +119,12 @@
         icon2.addEventListener("touchstart", function () {
             icon2.style.animation = "icons 0.7s steps(6) infinite";
         });
-        icon3.addEventListener("touchstart", function () {
+        icon3.addEventListener("touchend", function () {
             icon3.style.animation = "icons 0.3s steps(6) infinite";
             icon3.style.transition = "height 0.3s linear 1s";
             icon3.style.height = '180px';
         });
-        icon4.addEventListener("touchstart", function () {
+        icon4.addEventListener("touchmove", function () {
             icon4.style.animation = "icons 0.7s steps(6) infinite";
             icon4.style.transition = "background-color 0.6s linear 1s";
             icon4.style.backgroundColor = 'green';
@@ -139,6 +139,14 @@
             icon6.style.opacity = "0.2";   
         });
         btn.addEventListener("click", function () {
+            icon1.style.animation = "";
+            icon2.style.animation = "";
+            icon3.style.animation = "";
+            icon4.style.animation = "";
+            icon5.style.animation = "";
+            icon6.style.animation = "";
+        });
+        btn.addEventListener("touchmove", function () {
             icon1.style.animation = "";
             icon2.style.animation = "";
             icon3.style.animation = "";
