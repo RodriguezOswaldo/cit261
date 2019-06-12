@@ -9,12 +9,12 @@
     <title>Document</title>
     <style>
         html{
-            margin: 0 20px;
+            margin: 0 60px;
         }
         body{
             margin-left: auto;
             margin-right: auto;
-            max-width: 600px;
+            max-width: 700px;
         }
         div#box1 {
             background-image: url('https://source.unsplash.com/random/200x300');
@@ -52,6 +52,16 @@
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
         }
+        #box4{
+           background-image: url('https://source.unsplash.com/random/202x301');
+            margin: 20px;
+            width: 200px;
+            height: 300px;
+            animation: rotateX;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
 
         @keyframes skew {
             0% {transform: skew(0deg, 0deg)}
@@ -67,6 +77,10 @@
         @keyframes rotateY{
             from {transform: rotateY(0deg)}
             to {transform: rotateY(360deg)}
+        }
+        @keyframes rotateX{
+            from {transform: rotateX(0deg)}
+            to {transform: rotateX(360deg)}
         }
         @keyframes rotateX{
             from {transform: rotateX(0deg)}
@@ -95,6 +109,7 @@
     </div>
     <div id="box2">Content in the box 1!</div>
     <div id="box3">Content in the box 1!</div>
+    <div id="box4">Content in the box 1!</div>
 
     <script>
         function changeBg(el, clr) {
