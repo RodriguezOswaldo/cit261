@@ -10,7 +10,7 @@ body{
 img{
     border: 5px solid salmon;
 
-    /* transform: translate(100px, 200px); it takes two values axis X axis Y */
+   /* transform: translate(100px, 200px);  it takes two values axis X axis Y */
     /* transform: translateX(200px);/*it moves the object right to left
     transform: translateY(200px);it moves the object up and down */
     /* transform: scale(1, 1); /*it makes the element wider */

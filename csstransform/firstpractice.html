@@ -12,6 +12,29 @@
             width: 200px;
             height: 300px;
         }
+        #wrap{
+            animation: animate;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        }
+        @keyframes animate {
+            from{
+                transform: rotateX(0deg) scale(0.4) translate(0px, 0px);
+            }
+            to {
+                transform: rotateX(180deg) scale(1.2) translate(80px, 80px);
+            }
+        }
+         /* transform: translate(100px, 200px);  it takes two values axis X axis Y */
+    /* transform: translateX(200px);/*it moves the object right to left
+    transform: translateY(200px);it moves the object up and down */
+    /* transform: scale(1, 1); /*it makes the element wider */
+    /* transform: scaleX(1); it makes the element wider */
+    /* transform: scaleY(1); it makes the element wider*/
+    /* transform: rotateX(180deg);it rotates in its own axis */
+    /* transform: rotateZ(50deg); */
+    /* transform: rotateZ(-20deg) translateY(100px) scale(1.5); */
     </style>
 </head>
 <body>
@@ -19,7 +42,7 @@
     <button onclick="changeBg('box1', '#fff')">Transition!</button>
     <button onclick="changeBg('box1', '#333')">Transition!</button>
     <button onclick="changeBg('box1', 'red')">Transition!</button>
-    <div class="wrapper">
+    <div id="wrap" class="wrapper">
         <img src="https://cdn.pixabay.com/photo/2017/09/14/11/14/water-2748660__340.png" alt="">
     </div>
     <script>
@@ -28,6 +51,17 @@
             elem.style.transition = "background 1.0s linear 2s";
             elem.style.background = clr;
         }
+        // wrap.addEventListener('click',(e) => {
+        //     console.log(e.type)
+        //     wrap.style.transition = "transform 0.5s linear 1s";
+        //     wrap.style.transform = 'translate(100px, 200px);'
+        // })
+
+        //   wrap.addEventListener("click", function () {
+        //     wrap.style.animation = "animate 1s infinite";
+        //     // wrap.style.transition = "transform 1s linear 1s";
+        //     // wrap.style.transform = 'rotateY(180deg)';
+        // });
     </script>
 </body>
 </html>
