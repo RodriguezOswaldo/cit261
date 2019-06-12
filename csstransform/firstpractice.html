@@ -9,14 +9,30 @@
     <style>
         div#box1{
             background: #9DCEFF;
+            background-image: url('https://source.unsplash.com/random/200x300');
+            margin: 20px;
             width: 200px;
             height: 300px;
-        }
-        #wrap{
             animation: animate;
         animation-duration: 1s;
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
+        }
+        #wrap{
+            animation: skew;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        }
+        #box1{
+            transform: skew(15deg, 15deg);
+        }
+        @keyframes skew{
+            0%{transform: skew(0deg,0deg)}
+            25%{transform: skew(20deg,20deg)}
+            50%{transform: skew(40deg,40deg)}
+            75%{transform: skew(20deg,20deg)}
+            100%{transform: skew(0deg,0deg)}
         }
         @keyframes animate {
             from{
