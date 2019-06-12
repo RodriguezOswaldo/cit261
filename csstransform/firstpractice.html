@@ -62,6 +62,16 @@
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
         }
+        #box5{
+           background-image: url('https://source.unsplash.com/random/202x302');
+            margin: 20px;
+            width: 100px;
+            height: 200px;
+            animation: scaleY;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
 
         @keyframes skew {
             0% {transform: skew(0deg, 0deg)}
@@ -85,6 +95,10 @@
         @keyframes scaleX{
             from {transform: scaleX(1)}
             to {transform: scaleX(3)}
+        }
+        @keyframes scaleY{
+            from {transform: scaleY(1)}
+            to {transform: scaleY(3)}
         }
 
         /* transform: translate(100px, 200px);  it takes two values axis X axis Y */
@@ -110,6 +124,7 @@
     <div id="box2">Content in the box 1!</div>
     <div id="box3">Content in the box 1!</div>
     <div id="box4">Content in the box 1!</div>
+    <div id="box5">Content in the box 1!</div>
 
     <script>
         function changeBg(el, clr) {
