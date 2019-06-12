@@ -57,7 +57,7 @@
             margin: 20px;
             width: 200px;
             height: 300px;
-            animation: rotateX;
+            animation: scaleX;
             animation-duration: 1.5s;
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
@@ -82,9 +82,9 @@
             from {transform: rotateX(0deg)}
             to {transform: rotateX(360deg)}
         }
-        @keyframes rotateX{
-            from {transform: rotateX(0deg)}
-            to {transform: rotateX(360deg)}
+        @keyframes scaleX{
+            from {transform: scaleX(1)}
+            to {transform: scaleX(3)}
         }
 
         /* transform: translate(100px, 200px);  it takes two values axis X axis Y */
