@@ -163,10 +163,6 @@
             from {transform: rotateZ(0deg)}
             to {transform: rotateZ(360deg)}
         }
-        @keyframes matrix{
-           from{ transform: matrix(1, 2, -1, 1, 80, 80)}
-            to {transform: matrix(2, 3, 2, 2, 30, 30)}
-        }
         @keyframes skewY{
             from {transform: skewY(0deg)}
             to {transform: skewY(360deg)}
@@ -174,10 +170,6 @@
         @keyframes skewX{
             from {transform: skewX(0deg)}
             to {transform: skewX(360deg)}
-        }
-        @keyframes animate {
-            from {transform: rotateX(0deg) scale(0.4) translate(0px, 0px);}
-            to { transform: rotateX(180deg) scale(1.2) translate(80px, 80px);}
         }
         @keyframes skew{
             0% {transform: skew(0deg, 0deg)}
@@ -192,6 +184,14 @@
             50% { transform: translate(100px, 250px);}
             75% { transform: translate(50px, 75px);}
             100% {  transform: translate(0px, 0px);}
+        }
+        @keyframes animate {
+            from {transform: rotateX(0deg) scale(0.4) translate(0px, 0px);}
+            to { transform: rotateX(180deg) scale(1.2) translate(80px, 80px);}
+        }
+        @keyframes matrix{
+           from{ transform: matrix(-1, 2, -1, -1, 80, 80)}
+            to {transform: matrix(2, 3, 2, 2, 30, 30)}
         }
 
          
@@ -218,17 +218,19 @@
     <div id="box3">RotateX</div>
     <div id="box4">ScaleX!</div>
     <div id="box5">ScaleY!</div>
-    <div id="box6">RotateZ!</div>
     <div id="box7">Scale!</div>
+    <div id="box6">RotateZ!</div>
     <br>
-    <div id="box8">Matrix!</div>
     <div id="box9">SkewY!</div>
     <div id="box10">SkewX!</div>
     <div id="box11">Translate!</div>
     <div id="wrap" class="wrapper">
+        <p>Skew!</p>
         <img src="https://cdn.pixabay.com/photo/2017/09/14/11/14/water-2748660__340.png" alt="">
     </div>
     <div id="box1">Animate Various!</div>
+    <div id="box8">Matrix!</div>
+
 
     <br>
     <br>
