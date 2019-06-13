@@ -17,22 +17,7 @@
             margin-right: auto;
             max-width: 700px;
         }
-        div#box1 {
-            background-image: url('https://source.unsplash.com/random/200x300');
-            margin: 20px;
-            width: 200px;
-            height: 300px;
-            animation: animate;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-        }
-        #wrap {
-            animation: skew;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-        }
+       
         #box2 {
             background-image: url('https://source.unsplash.com/random/201x300');
             margin: 20px;
@@ -123,16 +108,21 @@
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
         }
-        @keyframes animate {
-            from {transform: rotateX(0deg) scale(0.4) translate(0px, 0px);}
-            to { transform: rotateX(180deg) scale(1.2) translate(80px, 80px);}
+        #wrap {
+            animation: skew;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
         }
-        @keyframes skew{
-            0% {transform: skew(0deg, 0deg)}
-            25% {transform: skew(20deg, 20deg)}
-            50% {transform: skew(40deg, 40deg)}
-            75% {transform: skew(20deg, 20deg)}
-            100% {transform: skew(0deg, 0deg)}
+        div#box1 {
+            background-image: url('https://source.unsplash.com/random/200x300');
+            margin: 20px;
+            width: 200px;
+            height: 300px;
+            animation: animate;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
         }
         @keyframes rotateY{
             from {transform: rotateY(0deg)}
@@ -173,6 +163,17 @@
             from {transform: skewX(0deg)}
             to {transform: skewX(360deg)}
         }
+        @keyframes animate {
+            from {transform: rotateX(0deg) scale(0.4) translate(0px, 0px);}
+            to { transform: rotateX(180deg) scale(1.2) translate(80px, 80px);}
+        }
+        @keyframes skew{
+            0% {transform: skew(0deg, 0deg)}
+            25% {transform: skew(20deg, 20deg)}
+            50% {transform: skew(40deg, 40deg)}
+            75% {transform: skew(20deg, 20deg)}
+            100% {transform: skew(0deg, 0deg)}
+        }
 
 
         /* transform: translate(100px, 200px);  it takes two values axis X axis Y */
@@ -188,13 +189,10 @@
 </head>
 
 <body>
-    <div id="box1">Animate Various!</div>
     <!-- <button onclick="changeBg('box1', '#fff')">Transition!</button>
     <button onclick="changeBg('box1', '#333')">Transition!</button>
     <button onclick="changeBg('box1', 'red')">Transition!</button> -->
-    <div id="wrap" class="wrapper">
-        <img src="https://cdn.pixabay.com/photo/2017/09/14/11/14/water-2748660__340.png" alt="">
-    </div>
+    
     <div id="box2">RotateY!</div>
     <div id="box3">RotateX</div>
     <div id="box4">ScaleX!</div>
@@ -205,6 +203,11 @@
     <div id="box8">Matrix!</div>
     <div id="box9">Matrix!</div>
     <div id="box10">Matrix!</div>
+    <div id="wrap" class="wrapper">
+        <img src="https://cdn.pixabay.com/photo/2017/09/14/11/14/water-2748660__340.png" alt="">
+    </div>
+    <div id="box1">Animate Various!</div>
+
     <br>
     <br>
     <br>
