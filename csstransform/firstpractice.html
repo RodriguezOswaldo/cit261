@@ -84,6 +84,8 @@
             width: 200px;
             height: 300px;
             animation: matrix;
+            transform: matrix(1, 2, -1, 1, 80, 80);
+
             animation-duration: 1.5s;
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
@@ -162,8 +164,8 @@
             to {transform: rotateZ(360deg)}
         }
         @keyframes matrix{
-            from {transform: matrix(1, 2, -1, 1, 80, 80)}
-            to {transform: rotateZ(360deg)}
+           from{ transform: matrix(1, 2, -1, 1, 80, 80)}
+            to {transform: matrix(2, 3, 2, 2, 30, 30)}
         }
         @keyframes skewY{
             from {transform: skewY(0deg)}
@@ -184,7 +186,7 @@
             75% {transform: skew(20deg, 20deg)}
             100% {transform: skew(0deg, 0deg)}
         }
-        @keyframes translte {
+        @keyframes translate {
             0% { transform: translate(0px, 0px);}
             25% { transform: translate(-50px, -75px);}
             50% { transform: translate(100px, 250px);}
