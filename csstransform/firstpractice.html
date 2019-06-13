@@ -123,16 +123,16 @@
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
         }
+        @keyframes animate {
+            from {transform: rotateX(0deg) scale(0.4) translate(0px, 0px);}
+            to { transform: rotateX(180deg) scale(1.2) translate(80px, 80px);}
+        }
         @keyframes skew{
             0% {transform: skew(0deg, 0deg)}
             25% {transform: skew(20deg, 20deg)}
             50% {transform: skew(40deg, 40deg)}
             75% {transform: skew(20deg, 20deg)}
             100% {transform: skew(0deg, 0deg)}
-        }
-        @keyframes animate {
-            from {transform: rotateX(0deg) scale(0.4) translate(0px, 0px);}
-            to { transform: rotateX(180deg) scale(1.2) translate(80px, 80px);}
         }
         @keyframes rotateY{
             from {transform: rotateY(0deg)}
