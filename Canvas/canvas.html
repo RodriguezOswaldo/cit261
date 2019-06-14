@@ -28,18 +28,29 @@
                        //x, y, width, height
         context.font="bold 22px Tahoma";
         context.textAlign="Start";
-        context.fillText('Hello from Canvas!', 30,430);
+        context.fillText('Hello from Canvas!', 30,330);
         context.translate( 100,230);
-        context.fillText('Another Text', 180,200);
+        context.fillText('Another Text', 80,200);
         context.fillStyle="rgba(22,10,180,200)";
         context.fillRect(20,-200,280,200);
         
         context.fillStyle="rgba(220,10,18,200)";
         context.fillRect(140,-100,280,200);
+        context.fillStyle="rgba(220,10,18,200)";
+        context.fillRect(100,300,280,200);
         
         context.rotate(125);
         context.fillStyle="rgba(22,10,18,200)";
         context.fillRect(140,150,280,200);
+
+        context.moveTo(130,60);
+        context.lineTo(200,200);
+        context.stroke();
+        
+
+        ctx.moveTo(360,100);
+        ctx.lineTo(200,200);
+        ctx.stroke();
 
     </script>
 </body>
