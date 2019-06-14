@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body{
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        #first{
+            background: rgb(255, 189, 19);
+        }
+    </style>
     
 </head>
 <body>
-    
+    <canvas id="first" width="480px" height="900px">
+    </canvas>
+    <script>    
+        let first = document.getElementById('first');
+        let context = first.getContext('2d');
+        context.fillStyle="rgba(22,120,180,200)";
+        context.fillRect(190,20,280,200);
+                       //x, y, width, height
+        context.font="bold 22px Tahoma";
+        context.textAlign="Start";
+        context.fillText('Hello from Canvas!', 30,430);
+        context.translate( 100,230);
+        context.fillText('Another Text', 180,200);
+        context.fillStyle="rgba(22,10,180,200)";
+        context.fillRect(20,-200,280,200);
+        
+        context.fillStyle="rgba(220,10,18,200)";
+        context.fillRect(140,-100,280,200);
+        
+        context.rotate(125);
+        context.fillStyle="rgba(22,10,18,200)";
+        context.fillRect(140,150,280,200);
 
+    </script>
 </body>
 </html>
