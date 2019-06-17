@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triggering Transitions with mouse hover</title>
+    <style>
+        body{
+            background-image: url('https://source.unsplash.com/random/2200x2004');
+            /* background-image: url('image2.jpg'); */
+            text-align: center;
+            margin-left:auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+        div{
+            text-align: center;
+            width: 200px;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #222;
+            border: 3px solid #923;
+            margin-top: 80px;
+            transition-property: font-size background-color border-radius opacity border;
+        }
+        div:hover{
+            background: #439;
+            border: 10px dotted rgb(130, 122, 175);
+            padding: 20px;
+            border-radius: 120% 20% 20% 20%;
+            font-size: 50px;
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+        }
+        .div1:hover{
+            border-radius: 20% 120% 20% 20%;
+        }
+        .div2:hover{
+            background: rgb(51, 153, 122);
+            border: 10px dotted rgb(29, 75, 48);
+            border-radius: 20% 20% 120% 20%;
+            opacity: 0.7;
+        } */
+        .div3:hover{
+            background: rgb(139, 173, 59);
+            border: 10px dotted rgb(131, 163, 17);
+            border-radius: 20% 20% 20% 120%;
+            opacity: 0.5;
+        }
+        .div4:hover{
+            background: rgb(160, 105, 34);
+            border: 10px dotted rgb(139, 96, 31);
+            border-radius: 20% 120% 20% 120%;
+            opacity: 0.5;
+        }
+        .div5:hover{
+            background: rgb(156, 34, 160);
+            border: 10px dotted rgb(83, 14, 85);
+            border-radius: 120% 20% 120% 20%;
+            opacity: 0.5;
+        } 
+        .div6:hover{
+            background: rgb(19, 66, 104);
+            border: 10px dotted rgb(55, 68, 138);
+            border-radius: 120% 120% 120% 120%;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1" class="div div1">div1    </div>
+    <div id="div2" class="div div2">div2   </div>
+    <div id="div3" class="div div3">div3    </div>
+    <div id="div4" class="div div4">div4    </div>
+    <div id="div5" class="div div5">div5    </div>
+    <div id="div6" class="div div6">div6    </div>
+    <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a>|<span id="currentDate"></span></p>
+    <script src="/scripts/currentdate.js">
+        ['click', 'touchstart'].forEach(evt =>{
+            div1.addEventListener(evt, function(){
+            div1.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div1.style.transitionDuration = "2s";
+            div1.style.backgroundColor = '#439';
+            div1.style.border= '10px dotted rgb(130, 122, 175)';
+            div1.style.padding= '20px';
+            div1.style.borderRadius= '120% 20% 20% 20%';
+            div1.style.fontSize=  '50px';
+        });
+        });
+        ['click', 'touchstart'].forEach(evt =>{
+        div2.addEventListener(evt, e =>{
+            div2.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div2.style.transitionDuration = "2s";
+            div2.style.backgroundColor = 'rgb(51, 153, 122)';
+            div2.style.border= '10px dotted rgb(29, 75, 48)';
+            div2.style.padding= '20px';
+            div2.style.borderRadius= '20% 120% 20% 20%';
+            div2.style.fontSize=  '50px';
+            div2.style.opacity=  '0.7';
+        });
+    });
+        ['click', 'touchstart'].forEach(evt =>{
+        div3.addEventListener(evt, e =>{
+            div3.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div3.style.transitionDuration = "2s";
+            div3.style.backgroundColor = 'rgb(139, 173, 59)';
+            div3.style.border= '10px dotted rgb(131, 163, 17)';
+            div3.style.padding= '20px';
+            div3.style.borderRadius= '20% 120% 120% 20%';
+            div3.style.fontSize=  '50px';
+            div3.style.opacity=  '0.6';
+        });
+        });
+        ['click', 'touchstart'].forEach(evt =>{
+        div4.addEventListener(evt, e =>{
+            div4.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div4.style.transitionDuration = "2s";
+            div4.style.backgroundColor = 'rgb(160, 105, 340)';
+            div4.style.border= '10px dotted rgb(139, 96, 31)';
+            div4.style.padding= '20px';
+            div4.style.borderRadius= '120% 20% 120% 20%';
+            div4.style.fontSize=  '50px';
+            div4.style.opacity=  '0.7';
+        });
+        });
+        ['click', 'touchstart'].forEach(evt =>{
+        div5.addEventListener(evt, e =>{
+            div5.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div5.style.transitionDuration = "2s";
+            div5.style.backgroundColor = 'rgb(156, 34, 160)';
+            div5.style.border= '10px dotted rgb(83, 14, 85)';
+            div5.style.padding= '20px';
+            div5.style.borderRadius= '20% 120% 20% 120%';
+            div5.style.fontSize=  '50px';
+            div5.style.opacity=  '0.7';
+        });
+        });
+        ['click', 'touchstart'].forEach(evt =>{
+        div6.addEventListener(evt, e =>{
+            div6.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div6.style.transitionDuration = "2s";
+            div6.style.backgroundColor = 'rgb(19, 66, 104)';
+            div6.style.border= '10px dotted rgb(55, 68, 138)';
+            div6.style.padding= '20px';
+            div6.style.borderRadius= '180% 180% 80% 80%';
+            div6.style.fontSize=  '50px';
+            div6.style.opacity=  '0.9';
+        });
+        });
+        
+    </script>
+
+</body>
+</html>
