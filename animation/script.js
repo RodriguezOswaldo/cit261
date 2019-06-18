@@ -16,8 +16,11 @@ var playPause = anime({
     delay: (el,i, l)=>{
         return i*1000
     },
-    autoplay:true
+    autoplay:false
 });
+
+document.querySelector('#boxes .play').onclick = playPause.play;
+document.querySelector('#boxes .pause').onclick = playPause.pause;
 
 // anime({
 //     targets: 'div.box.blue',
