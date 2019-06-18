@@ -12,7 +12,7 @@ var playPause = anime({
         value:'1turn',
         easing: 'easeInOutSine'
     },
-    backgroundImage: "url('https://source.unsplash.com/random/100x104')",
+    // backgroundImage: "url('https://source.unsplash.com/random/100x104')",
     delay: (el,i, l)=>{
         return i*1000
     },
