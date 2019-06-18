@@ -1,4 +1,4 @@
-anime({
+var playPause = anime({
     targets: 'div.box',
     skewY: [
         {value:200, duration: 500},
@@ -14,9 +14,11 @@ anime({
     },
     backgroundImage: "url('https://source.unsplash.com/random/100x104')",
     delay: (el,i, l)=>{
-        return i*2000
-    }
+        return i*1000
+    },
+    autoplay:true
 });
+
 // anime({
 //     targets: 'div.box.blue',
 //     translateY: [
