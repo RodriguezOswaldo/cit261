@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Some Cool animations!</title>
+    <style>
+        body{
+            background: #597;
+            max-width: 900px;
+            text-align: center;
+            margin-left: auto; 
+            margin-right: auto; 
+            margin-top:300px;
+        }
+        .box{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .red{
+            background-image:url('https://source.unsplash.com/random/100x101') ;
+            background: red;
+        }
+        .blue{
+            background-image:url('https://source.unsplash.com/random/100x102') ;
+            background: blue;
+        }
+        .yellow{
+            background-image:url('https://source.unsplash.com/random/100x103') ;
+            background: yellow;
+        }
+        .green{
+            background-image:url('https://source.unsplash.com/random/100x104') ;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box yellow"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box red"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
