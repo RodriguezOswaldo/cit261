@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Some Cool animations!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body{
+        body {
             background: #597;
             max-width: 900px;
             text-align: center;
-            margin-left: auto; 
-            margin-right: auto; 
-            margin-top:300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 300px;
         }
-        .box{
+
+        .box {
             position: relative;
             width: 100px;
             height: 100px;
             margin: 10px;
             display: inline-block;
+            box-shadow: #333 4px 4px 4px;
         }
-        .red{
-            background-image:url('https://source.unsplash.com/random/100x101') ;
+
+        .red {
+            background-image: url('https://source.unsplash.com/random/100x101');
             background: red;
         }
-        .blue{
-            background-image:url('https://source.unsplash.com/random/100x102') ;
+        .blue {
+            background-image: url('https://source.unsplash.com/random/100x102');
             background: blue;
         }
-        .yellow{
-            background-image:url('https://source.unsplash.com/random/100x103') ;
+        .yellow {
+            background-image: url('https://source.unsplash.com/random/100x103');
             background: yellow;
         }
-        .green{
-            background-image:url('https://source.unsplash.com/random/100x104') ;
+        .green {
+            background-image: url('https://source.unsplash.com/random/100x104');
             background: green;
+        }
+        #boxes{
+            background: #389;
         }
     </style>
 </head>
+
 <body>
-    <div class="box yellow"></div>
-    <div class="box green"></div>
-    <div class="box blue"></div>
-    <div class="box red"></div>
+    <div id="boxes">
+        <div id="btns">
+            <button class="play"><i class="fa fa-play-circle"></i> </button>
+            <button class="play"><i class="fa fa-pause-circle"></i>  </button>
+        </div>
+        <div class="box yellow"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+        <div class="box red"></div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
