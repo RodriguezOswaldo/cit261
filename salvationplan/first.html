@@ -18,32 +18,38 @@
         .container {
             position: relative;
             display: flex;
-            width: 1000px;
+            width: 1400px;
             height: 308px;
-            margin-left: 40px;;
+            margin-left: 40px;
         }
         .thecard {
             position: absolute;
-            width: 20%;
+            width: 14%;
             height: 100%;
             transform-style: preserve-3d;
             /* used in order to show the back of the card */
             transition: all 1s ease;
         }
         .card1{
-            right: 100%;
+            right: 1400px;
         }
         .card2{
-            right: 80%;
+            right: 1200px;
         }
         .card3{
-            right: 60%;
+            right: 1000px;
         }
         .card4{
-            right: 40%;
+            right: 800px;
         }
         .card5{
-            right: 20%;
+            right: 600px;
+        }
+        .card6{
+            right: 400px;
+        }
+        .card7{
+            right: 14%;
         }
         .thecard:hover {
             transform: rotateY(180deg);
@@ -64,10 +70,25 @@
         .card1>.front {
             background-image: url('premortal.png');
         }
+        .card2>.front {
+            /* background-image: url('spiritworld.png'); */
+            
+            
+        }
         .card3>.front {
             background-image: url('earthlife.png');
         }
-        .card5>.front {
+        .card4>.front {
+            background-image: url('earthlife.png');
+        }
+        .card5>.front img {
+            text-align: center;
+            margin-left: -10px;
+        }
+        .card6>.front {
+            background-image: url('earthlife.png');
+        }
+        .card7>.front {
             background-image: url('resurrection.png');
         }
 
@@ -91,7 +112,6 @@
         <div class="thecard card1">
             <div class="front"><h2>Premortal Life</h2></div>
             <div class="back">The Back</div>
-
         </div>
         <div class="thecard card2">
             <div class="front"><h2>Creation</h2></div>
@@ -102,10 +122,20 @@
             <div class="back">The Back</div>
         </div>
         <div class="thecard card4">
-            <div class="front"><h2>Mortal Death</h2></div>
+            <div class="front"><h2>Physical Death</h2></div>
             <div class="back">The Back</div>
         </div>
         <div class="thecard card5">
+                <div class="front"><h2>Physical Death</h2>
+                    <img src="spiritworld.png" alt="Spirit World - Paradise">
+                </div>
+                <div class="back">The Back</div>
+            </div>
+            <div class="thecard card6">
+                    <div class="front"><h2>Physical Death</h2></div>
+                    <div class="back">The Back</div>
+                </div>
+        <div class="thecard card7">
             <div class="front"><h2>Resurrection</h2></div>
             <div class="back">The Back</div>
         </div>
