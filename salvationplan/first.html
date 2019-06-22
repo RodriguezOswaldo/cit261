@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flipping Card</title>
+    <style>
+        body {
+            position: relative;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #199;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            width: 1000px;
+            height: 308px;
+            margin: auto;
+        }
+
+        .thecard {
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            transform-style: preserve-3d;
+            /* used in order to show the back of the card */
+            transition: all 1s ease;
+        }
+        .card1{
+            right: 100%;
+        }
+        .card2{
+            right: 80%;
+        }
+        .card3{
+            right: 60%;
+        }
+        .card4{
+            right: 40%;
+        }
+        .card5{
+            right: 20%;
+        }
+        .thecard:hover {
+            transform: rotateY(180deg);
+        }
+
+        .front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #ffc728;
+            color: #333;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+
+        .card1>.front {
+            background-image: url('premortal.png');
+        }
+        .card3>.front {
+            background-image: url('earthlife.png');
+        }
+        .card5>.front {
+            background-image: url('resurrection.png');
+        }
+
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: white;
+            color: #333;
+            transform: rotateY(180deg);
+            border-radius: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The Plan of Salvation!</h2>
+    <div class="container">
+        <div class="thecard card1">
+            <div class="front"><h2>Premortal Life</h2></div>
+            <div class="back">The Back</div>
+
+        </div>
+        <div class="thecard card2">
+            <div class="front"></div>
+            <div class="back">The Back</div>
+        </div>
+        <div class="thecard card3">
+            <div class="front"><h2>Earth Life</h2></div>
+            <div class="back">The Back</div>
+        </div>
+        <div class="thecard card4">
+            <div class="front">The Front4</div>
+            <div class="back">The Back</div>
+        </div>
+        <div class="thecard card5">
+            <div class="front"><h2>Resurrection</h2></div>
+            <div class="back">The Back</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

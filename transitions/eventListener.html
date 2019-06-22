@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Events!</title>
+    <style>
+         div{
+            text-align: center;
+            width: 200px;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #222;
+            border: 3px solid #923;
+            margin-top: 80px;
+            transition-property: font-size background-color border-radius opacity border;
+        }
+        div:hover{
+            background: #439;
+            border: 10px dotted rgb(130, 122, 175);
+            padding: 180px;
+            border-radius: 120% 20% 20% 20%;
+            font-size: 50px;
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+        }
+        .div1:hover{
+            border-radius: 20% 120% 20% 20%;
+        }
+    </style>
 </head>
 <body>
     <p>
@@ -16,17 +41,18 @@
     <p>
         <input type="text" id="text">
     </p>
-
+    <div id="div1">Div!</div>
     <script>
 
         let btn = document.getElementById('btn');
         let link = document.getElementById('link');
         let text = document.getElementById('text');
-
+        //this is the simple way for adding events, addEventListener('eventType', 'function called by event') 
         btn.addEventListener('click', buttonClicked);
         function buttonClicked(e){
             console.log(e.type, e.target, e.currentTarget);
         }
+        //this the same structure but using a fat arrow function which does the same thing
         link.addEventListener('click', e => {
             e.preventDefault(); // if it is a link it would send the user to a page,prevent defaul would prevent that to happen.
             console.log(e.type, e.target);
@@ -36,6 +62,18 @@
         });
         text.addEventListener('change', function(e){
             console.log(e.type, e.target, e.target.value);
+        });
+        //Here we are adding two events to the same element, Check it out! 
+        ['click', 'touchstart'].forEach(evt =>{
+            div1.addEventListener(evt, function(){
+            div1.style.transition = "font-size background-color border-radius opacity border ease-out";
+            div1.style.transitionDuration = "2s";
+            div1.style.backgroundColor = '#439';
+            div1.style.border= '10px dotted rgb(130, 122, 175)';
+            div1.style.padding= '20px';
+            div1.style.borderRadius= '120% 20% 20% 20%';
+            div1.style.fontSize=  '50px';
+        });
         });
 //         link.addEventListener('click', linkClicked);
 //         function linkClicked(e){
