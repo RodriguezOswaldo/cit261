@@ -10,8 +10,7 @@
         body {
             position: relative;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: auto;
             background: #199;
             text-align: center;
             overflow-x: hidden;
@@ -55,6 +54,7 @@
         }
         .thecard:hover {
             transform: rotateY(180deg);
+            
         }
 
         .front {
@@ -81,7 +81,10 @@
             background-image: url('earthlife.png');
         }
         .card4>.front {
-            background-image: url('earthlife.png');
+            background-image: url('atonement.png');
+        }
+        .card4>.back {
+            background-image: url('jesus.jpg');
         }
         .card5>.front img {
             text-align: center;
@@ -91,9 +94,11 @@
             background-image: url('resurrection.png');
         }
         .card7>.front {
-            background-image: url('resurrection.png');
+            background-image: url('first.png');
         }
-
+        .card7:hover{
+            transform:translateX(500px, 500px);
+        }
         .back {
             position: absolute;
             width: 100%;
