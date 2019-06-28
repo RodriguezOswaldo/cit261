@@ -126,15 +126,13 @@
             transform: rotateY(180deg);
             border-radius: 30px;
             box-shadow: #159 5px 5px 5px;
-            font-size: 20px;
-            padding-top:40px; 
         }
 
     </style>
 </head>
 
 <body>
-    <h2>The Plan of Salvation!</h2>
+    <h2 id="title">The Plan of Salvation!</h2>
     <div class="container">
         <div class="thecard card1">
             <div class="front">
@@ -187,14 +185,14 @@
         thePlan.onload = ()=>{
             var theData =JSON.parse(thePlan.responseText);
             console.log(theData);
-            console.log(theData[0])
-            document.getElementById('preLife').innerHTML =theData[0]['Premortal Life'];
-            document.getElementById('creation').innerHTML =theData[0]['Creation'];
-            document.getElementById('earthLife').innerHTML =theData[0]['Earth Life'];
-            document.getElementById('atonement').innerHTML =theData[0]['Atonement of Jesus Christ'];
-            document.getElementById('phyDeath').innerHTML =theData[0]['Physical Death'];
-            document.getElementById('resurrection').innerHTML =theData[0]['Resurrection'];
-            document.getElementById('aftLife').innerHTML =theData[0]['After Life'];
+            console.log(theData[0].title)
+            document.getElementById('preLife').innerHTML = "<h2>" + theData[0].title + "</h2>" + "<p>" + theData[0].explain+ "</p>";
+            document.getElementById('creation').innerHTML ="<h2>" + theData[1].title + "</h2>" + "<p>" + theData[1].explain+ "</p>";
+            document.getElementById('earthLife').innerHTML ="<h2>" + theData[2].title + "</h2>" + "<p>" + theData[2].explain+ "</p>";
+            document.getElementById('atonement').innerHTML ="<h2>" + theData[3].title + "</h2>" + "<p>" + theData[3].explain+ "</p>";
+            document.getElementById('phyDeath').innerHTML ="<h2>" + theData[4].title + "</h2>" + "<p>" + theData[4].explain+ "</p>";
+            document.getElementById('resurrection').innerHTML ="<h2>" + theData[5].title + "</h2>" + "<p>" + theData[5].explain+ "</p>";
+            document.getElementById('aftLife').innerHTML ="<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain+ "</p>";
         }
     thePlan.send();
 
