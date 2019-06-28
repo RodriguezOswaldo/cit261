@@ -121,14 +121,15 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            background: white;
-            color: #333;
+            background: rgb(67, 162, 165);
+            color: rgb(104, 105, 107);
             transform: rotateY(180deg);
             border-radius: 30px;
             box-shadow: #159 5px 5px 5px;
-            font-size: 10px;
-            
+            font-size: 20px;
+            padding-top:40px; 
         }
+
     </style>
 </head>
 
@@ -187,13 +188,13 @@
             var theData =JSON.parse(thePlan.responseText);
             console.log(theData);
             console.log(theData[0])
-            document.getElementById('preLife').innerHTML =theData['Premortal Life'];
-            document.getElementById('creation').innerHTML =theData['Creation'];
-            document.getElementById('earthLife').innerHTML =theData['Earth Life'];
-            document.getElementById('atonement').innerHTML =theData['Atonement of Jesus Christ'];
-            document.getElementById('phyDeath').innerHTML =theData['Physical Death'];
-            document.getElementById('resurrection').innerHTML =theData['Resurrection'];
-            document.getElementById('aftLife').innerHTML =theData['After Life'];
+            document.getElementById('preLife').innerHTML =theData[0]['Premortal Life'];
+            document.getElementById('creation').innerHTML =theData[0]['Creation'];
+            document.getElementById('earthLife').innerHTML =theData[0]['Earth Life'];
+            document.getElementById('atonement').innerHTML =theData[0]['Atonement of Jesus Christ'];
+            document.getElementById('phyDeath').innerHTML =theData[0]['Physical Death'];
+            document.getElementById('resurrection').innerHTML =theData[0]['Resurrection'];
+            document.getElementById('aftLife').innerHTML =theData[0]['After Life'];
         }
     thePlan.send();
 
