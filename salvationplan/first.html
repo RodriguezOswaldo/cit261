@@ -126,6 +126,8 @@
             transform: rotateY(180deg);
             border-radius: 30px;
             box-shadow: #159 5px 5px 5px;
+            font-size: 10px;
+            
         }
     </style>
 </head>
@@ -176,17 +178,26 @@
         </div>
     </div>
 
+    <div id="test"> </div>
+
 <script>
         const thePlan = new XMLHttpRequest();
         thePlan.open('GET', 'https://rodriguezoswaldo.github.io/cit261/salvationplan/salvation.json',true);
         thePlan.onload = ()=>{
             var theData =JSON.parse(thePlan.responseText);
             console.log(theData);
-            console.log(theData['Premortal Life'])
+            console.log(theData[0])
+            document.getElementById('preLife').innerHTML =theData['Premortal Life'];
+            document.getElementById('creation').innerHTML =theData['Creation'];
+            document.getElementById('earthLife').innerHTML =theData['Earth Life'];
+            document.getElementById('atonement').innerHTML =theData['Atonement of Jesus Christ'];
+            document.getElementById('phyDeath').innerHTML =theData['Physical Death'];
+            document.getElementById('resurrection').innerHTML =theData['Resurrection'];
+            document.getElementById('aftLife').innerHTML =theData['After Life'];
         }
     thePlan.send();
 
-
+        consol
 </script>
 </body>
 
