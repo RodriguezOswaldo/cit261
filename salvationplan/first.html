@@ -137,47 +137,56 @@
             <div class="front">
                 <h2>Premortal Life</h2>
             </div>
-            <div class="back">The Back</div>
+            <div id="preLife" class="back">The Back</div>
         </div>
         <div class="thecard card2">
             <div class="front" title="Jesus Christ created the earth">
                 <h2>Creation</h2>
             </div>
-            <div class="back" title="Jesus Christ created the earth">The Back</div>
+            <div id="creation" class="back" title="Jesus Christ created the earth">The Back</div>
         </div>
         <div class="thecard card3">
             <div class="front">
                 <h2>Earth Life</h2>
             </div>
-            <div class="back">The Back</div>
+            <div id="earthLife" class="back">The Back</div>
         </div>
         <div class="thecard card4">
             <div class="front">
                 <h2>Atonement of Jesus Christ</h2>
             </div>
-            <div class="back">The Back</div>
+            <div id="atonement" class="back">The Back</div>
         </div>
         <div class="thecard card5">
             <div class="front">
                 <h2>Physical Death</h2>
                 <img src="spiritworld.png" alt="Spirit World - Paradise - Spiritual Prison">
             </div>
-            <div class="back" title="Spirit World - Paradise/Spiritual Prison">The Back</div>
+            <div id="phyDeath"class="back" title="Spirit World - Paradise/Spiritual Prison">The Back</div>
         </div>
         <div class="thecard card6">
             <div class="front">
                 <h2>Resurrection</h2>
             </div>
-            <div class="back">The Back</div>
+            <div id="resurrection" class="back">The Back</div>
         </div>
         <div class="thecard card7">
             <div class="front"></div>
-            <div class="back">The Back</div>
+            <div id="aftLife" class="back">The Back</div>
         </div>
     </div>
 
 <script>
-    console.log()
+        const thePlan = new XMLHttpRequest();
+        thePlan.open('GET', 'https://rodriguezoswaldo.github.io/cit261/salvationplan/salvation.json',true);
+        thePlan.onload = ()=>{
+            var theData =JSON.parse(thePlan.responseText);
+            console.log(theData);
+            console.log(theData['Premortal Life'])
+        }
+    thePlan.send();
+
+
 </script>
 </body>
 
