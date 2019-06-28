@@ -33,7 +33,7 @@
             height: 100%;
             transform-style: preserve-3d;
             /* used in order to show the back of the card */
-            transition: all 1s ease;
+            transition: all 1s ease-in;
         }
 
         .card1 {
@@ -65,7 +65,7 @@
         }
 
         .thecard:hover {
-            transform: rotateY(180deg) translateY(200px);
+            transform: rotateY(180deg) translateY(400px) scale(1.5);
         }
 
         .front {
@@ -89,8 +89,6 @@
 
         .card2>.front {
             background-image: url('creacion.png');
-
-
         }
 
         .card3>.front {
@@ -128,7 +126,6 @@
             transform: rotateY(180deg);
             border-radius: 30px;
             box-shadow: #159 5px 5px 5px;
-
         }
     </style>
 </head>
