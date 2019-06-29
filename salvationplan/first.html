@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Plan of Salvation</title>
     <style>
-       
         body {
             position: relative;
             max-width: 1500px;
@@ -74,13 +73,11 @@
             height: 100%;
             backface-visibility: hidden;
             background: #B7DBEE;
-            ;
             color: #333;
             text-align: center;
             border-radius: 20px;
             font-size: 15px;
             box-shadow: #333 5px 5px 5px;
-
         }
 
         .card1>.front {
@@ -127,12 +124,14 @@
             border-radius: 30px;
             box-shadow: #159 5px 5px 5px;
         }
-        #title{
+
+        #title {
             animation-name: theTitle;
-            color:#233;
+            color: #233;
         }
-        h2{
-            display:flex;
+
+        h2 {
+            display: flex;
             justify-content: center;
             align-content: flex-end;
         }
@@ -171,7 +170,7 @@
                 <h2>Physical Death</h2>
                 <img src="spiritworld.png" alt="Spirit World - Paradise - Spiritual Prison">
             </div>
-            <div id="phyDeath"class="back" title="Spirit World - Paradise/Spiritual Prison">The Back</div>
+            <div id="phyDeath" class="back" title="Spirit World - Paradise/Spiritual Prison">The Back</div>
         </div>
         <div class="thecard card6">
             <div class="front">
@@ -187,25 +186,23 @@
 
     <div id="test"> </div>
 
-<script>
+    <script>
         const thePlan = new XMLHttpRequest();
-        thePlan.open('GET', 'https://rodriguezoswaldo.github.io/cit261/salvationplan/salvation.json',true);
-        thePlan.onload = ()=>{
-            var theData =JSON.parse(thePlan.responseText);
+        thePlan.open('GET', 'https://rodriguezoswaldo.github.io/cit261/salvationplan/salvation.json', true);
+        thePlan.onload = () => {
+            var theData = JSON.parse(thePlan.responseText);
             console.log(theData);
             console.log(theData[0].title)
-            document.getElementById('preLife').innerHTML = "<h2>" + theData[0].title + "</h2>" + "<p>" + theData[0].explain+ "</p>";
-            document.getElementById('creation').innerHTML ="<h2>" + theData[1].title + "</h2>" + "<p>" + theData[1].explain+ "</p>";
-            document.getElementById('earthLife').innerHTML ="<h2>" + theData[2].title + "</h2>" + "<p>" + theData[2].explain+ "</p>";
-            document.getElementById('atonement').innerHTML ="<h2>" + theData[3].title + "</h2>" + "<p>" + theData[3].explain+ "</p>";
-            document.getElementById('phyDeath').innerHTML ="<h2>" + theData[4].title + "</h2>" + "<p>" + theData[4].explain+ "</p>";
-            document.getElementById('resurrection').innerHTML ="<h2>" + theData[5].title + "</h2>" + "<p>" + theData[5].explain+ "</p>";
-            document.getElementById('aftLife').innerHTML ="<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain+ "</p>";
+            document.getElementById('preLife').innerHTML = "<h2>" + theData[0].title + "</h2>" + "<p>" + theData[0].explain + "</p>";
+            document.getElementById('creation').innerHTML = "<h2>" + theData[1].title + "</h2>" + "<p>" + theData[1].explain + "</p>";
+            document.getElementById('earthLife').innerHTML = "<h2>" + theData[2].title + "</h2>" + "<p>" + theData[2].explain + "</p>";
+            document.getElementById('atonement').innerHTML = "<h2>" + theData[3].title + "</h2>" + "<p>" + theData[3].explain + "</p>";
+            document.getElementById('phyDeath').innerHTML = "<h2>" + theData[4].title + "</h2>" + "<p>" + theData[4].explain + "</p>";
+            document.getElementById('resurrection').innerHTML = "<h2>" + theData[5].title + "</h2>" + "<p>" + theData[5].explain + "</p>";
+            document.getElementById('aftLife').innerHTML = "<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain + "</p>";
         }
-    thePlan.send();
-
-        consol
-</script>
+        thePlan.send();
+    </script>
 </body>
 
 </html>
