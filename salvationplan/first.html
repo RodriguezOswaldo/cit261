@@ -145,10 +145,36 @@
             text-align: left;
         }
         label{
-            font-size: 90%;
+            font-size: 20px;
+
         }
         #heading{
             color: rgb(47, 123, 199);
+        }
+        .top{
+            margin: 10px;
+            margin-top:120px;
+        }
+        input{
+            margin:10px;
+            font-size: 15px;
+        }
+        legend{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #btn{
+            font-size: 20px;
+            border: #233 2px solid;
+            background: #119;
+            color:white;
+        }
+        #btn:hover{
+            background: #999;
+            color:black;
+        }
+        span{
+            color:red;
         }
     </style>
 </head>
@@ -206,15 +232,11 @@
         <form action="">
             <fieldset>
                 <legend>Let us contact you!</legend>
-                <label for="">Full Name*: </label><input id="name" type="text" name="fullName" placeholder="First and Last Name"
-                    required><br>
-                <label class="top">Email: <input id="email" type="email" name="email" placeholder="something@else.com"></label><br>
-                <label class="top">Phone Number*: <input id="phone" type="tel" name="phoneNumber" placeholder="5555555555"
-                        required></label><br>
-                <label class="top"><Address>Address*: <input type="address" name="text" placeholder="123 false street"
-                            required></Address></Address></label>
-                <label class="top">Zip Code*: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999"
-                        required></label><br>
+                <label class="top" for="">Full Name<span>*</span>: <input id="name" type="text" name="fullName" placeholder="First and Last Name"required></label><br>
+                <label class="top">Email<span>*</span>: <input id="email" type="email" name="email" placeholder="something@else.com" required></label><br>
+                <label class="top">Phone Number<span>*</span>: <input id="phone" type="tel" name="phoneNumber" placeholder="5555555555" required></label><br>
+                <label class="top">Address<span>*</span>: <input type="address" name="text" placeholder="123 false street" required></label><br>
+                <label class="top">Zip Code: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999"></label><br>
                 <button id="btn">Send form</button>
             </fieldset>
         </form>
@@ -262,7 +284,7 @@
             var parseName = JSON.parse(name);
             console.log(parseName);
 
-            document.getElementById('output').innerHTML = parseName[0].title;
+            document.getElementById('output').innerHTML = parseName;
         }
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('btn').addEventListener('click', addUsers);
