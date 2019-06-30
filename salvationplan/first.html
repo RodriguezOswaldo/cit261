@@ -64,7 +64,7 @@
         }
 
         .thecard:hover {
-            transform: rotateY(180deg) translateY(400px) scale(1.5);
+            transform: rotateY(180deg) translate(-300px, 400px) scale(1.5);
         }
 
         .front {
@@ -135,6 +135,18 @@
             justify-content: center;
             align-content: flex-end;
         }
+        #form{
+            margin: 40px;
+        }
+        fieldset{
+            border: #159 2px solid;
+            margin-right: 100px;
+            margin-left: 100px; 
+            text-align: left;
+        }
+        label{
+            font-size: 90%;
+        }
     </style>
 </head>
 
@@ -185,6 +197,21 @@
     </div>
 
     <div id="test"> </div>
+
+    <div id="form">
+        <form action="">
+            <fieldset>
+                <legend>Do you want to learn more?</legend>
+                <label for="">Full Name*: </label><input type="text" name="fullName" placeholder="First and Last Name" required><br> 
+                <label class="top">Email: <input type="email" name="email" placeholder="something@else.com"></label><br>
+                <label class="top">Phone Number*: <input type="tel" name="phoneNumber" placeholder="5555555555" required></label><br>
+                <label class="top"><Address>Address*: <input type="address" name="text" placeholder="123 false street" required></Address></Address></label>
+                <label class="top">Zip Code*: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999" required></label><br>
+                <button>Send form</button>
+            </fieldset>
+        </form>
+
+    </div>
 
     <script>
         const thePlan = new XMLHttpRequest();

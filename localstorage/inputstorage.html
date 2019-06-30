@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input from the User</title>
+</head>
+<body>
+    <form action="">
+        <div class="formBox">
+            <label for="title">Movie</label>
+            <input type="text" id="title" placeholder="Title">
+        </div>
+        <div class="formBox">
+            <label for="yr">Year</label>
+            <input type="text" id="yr" placeholder="Year">
+        </div>
+        <div class="formBox">
+            <button id="btn">Click to Add</button>
+        </div>
+        <div id="msg">
+            <pre></pre>
+        </div>
+        <div id="output">
+
+        </div>
+    </form>
+    <script>
+        let movies = [];
+        const addMovie = (ev) =>{
+            ev.preventDefault(); //to stop the form submitting
+            let movie ={
+                id: Date.now(),
+                title: document.getElementById('title').value,
+                year: document.getElementById('yr').value
+            }
+            movies.push(movie);//pusing into the Array Movies the input store in the variable movie.
+            document.forms[0].reset();// clear the form for the next entries
+
+            //for display purposes only
+            console.warn('added', {movies});
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n'+ JSON.stringify(movies, '\t', 2);
+            
+            //saving to localStorage
+            localStorage.setItem('MyMovieList', JSON.stringify(movies));
+            var name = localStorage.getItem('MyMovieList');
+            var parseName = JSON.parse(name);
+            console.log(parseName);
+
+            document.getElementById('output').innerHTML = parseName[0].title;
+                }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addMovie);
+        });
+        console.table(movies);
+        // localStorage.clear();
+    </script>
+</body>
+</html>
