@@ -203,16 +203,21 @@
         <form action="">
             <fieldset>
                 <legend>Let us contact you!</legend>
-                <label for="">Full Name*: </label><input type="text" name="fullName" placeholder="First and Last Name" required><br> 
-                <label class="top">Email: <input type="email" name="email" placeholder="something@else.com"></label><br>
-                <label class="top">Phone Number*: <input type="tel" name="phoneNumber" placeholder="5555555555" required></label><br>
-                <label class="top"><Address>Address*: <input type="address" name="text" placeholder="123 false street" required></Address></Address></label>
-                <label class="top">Zip Code*: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999" required></label><br>
-                <button>Send form</button>
+                <label for="">Full Name*: </label><input id="name" type="text" name="fullName" placeholder="First and Last Name"
+                    required><br>
+                <label class="top">Email: <input id="email" type="email" name="email" placeholder="something@else.com"></label><br>
+                <label class="top">Phone Number*: <input id="phone" type="tel" name="phoneNumber" placeholder="5555555555"
+                        required></label><br>
+                <label class="top"><Address>Address*: <input type="address" name="text" placeholder="123 false street"
+                            required></Address></Address></label>
+                <label class="top">Zip Code*: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999"
+                        required></label><br>
+                <button id="btn">Send form</button>
             </fieldset>
         </form>
 
     </div>
+    <div id="msg"></div>
 
     <script>
         const thePlan = new XMLHttpRequest();
@@ -230,6 +235,37 @@
             document.getElementById('aftLife').innerHTML = "<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain + "</p>";
         }
         thePlan.send();
+
+        let users = [];
+        const addUsers = (ev) => {
+            ev.preventDefault(); //to stop the form submitting
+            let user = {
+                id: Date.now(),
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            }
+            users.push(user);//pusing into the Array Movies the input store in the variable movie.
+            document.forms[0].reset();// clear the form for the next entries
+
+            //for display purposes only
+            console.warn('added', { users });
+            let pre = document.querySelector('#msg');
+            pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
+
+            //saving to localStorage
+            localStorage.setItem('MyMovieList', JSON.stringify(users));
+            var name = localStorage.getItem('MyMovieList');
+            var parseName = JSON.parse(name);
+            console.log(parseName);
+
+            document.getElementById('output').innerHTML = parseName[0].title;
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('btn').addEventListener('click', addUsers);
+        });
+        console.table(users);
+        // localStorage.clear();
     </script>
 </body>
 
