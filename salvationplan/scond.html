@@ -9,7 +9,6 @@
     <title>The Plan of Salvation</title>
     <style>
         body {
-            position: relative;
             max-width: 1500px;
             margin-left: auto;
             margin-right: auto;
@@ -18,21 +17,28 @@
         }
 
         .container {
-            position: relative;
-            display: flex;
-            width: 1400px;
-            height: 308px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3,1fr);
             /* border:2px #189 solid ; */
             border-radius: 20px;
+            grid-template-areas: 
+            "title title title"
+            "thecard thecard thecard"
+            "form form form";
         }
 
         .thecard {
-            position: absolute;
+            
             width: 14%;
-            height: 100%;
+            height: 70%;
             transform-style: preserve-3d;
             /* used in order to show the back of the card */
             transition: all 1s ease-in;
+        }
+        .cards{
+            grid-template-columns: repeat(7,1fr);
+            grid-area: thecard;
         }
 
         .card1 {
@@ -133,6 +139,7 @@
             animation-fill-mode: forwards;
             transition-property: transform;
             transition-duration: 1s;
+            grid-area: title;
         }
 
         h2 {
@@ -142,6 +149,7 @@
         }
         #form{
             margin: 40px;
+            grid-area: form;
         }
         fieldset{
             border: #159 2px solid;
@@ -189,79 +197,96 @@
                 transform: rotateX(00deg) scale(1);
             }
             100%{
-                transform: rotateX(0deg) scale(1);
+                transform: rotateX(360deg) scale(0.5);
             }
         }
     </style>
 </head>
 
 <body>
-    <h1 id="title">The Plan of Salvation!</h1>
     <div class="container">
-        <div class="thecard card1">
-            <div class="front">
-                <h3>Premortal Life</h3>
+        <h1 id="title">The Plan of Salvation!</h1>
+        <div class="cards">
+            <!---First Card-->
+            <div class="thecard card1">
+                <div class="front">
+                    <h3>Premortal Life</h3>
+                </div>
+                <div id="preLife" class="back">The Back</div>
             </div>
-            <div id="preLife" class="back">The Back</div>
-        </div>
-        <div class="thecard card2">
-            <div class="front" title="Jesus Christ created the earth">
-                <h3>Creation</h3>
+
+            <!---Second Card-->
+            <div class="thecard card2">
+                <div class="front" title="Jesus Christ created the earth">
+                    <h3>Creation</h3>
+                </div>
+                <div id="creation" class="back" title="Jesus Christ created the earth">The Back</div>
             </div>
-            <div id="creation" class="back" title="Jesus Christ created the earth">The Back</div>
-        </div>
-        <div class="thecard card3">
-            <div class="front">
-                <h3>Earth Life</h3>
+
+            <!---Third Card-->
+            <div class="thecard card3">
+                <div class="front">
+                    <h3>Earth Life</h3>
+                </div>
+                <div id="earthLife" class="back">The Back</div>
             </div>
-            <div id="earthLife" class="back">The Back</div>
-        </div>
-        <div class="thecard card4">
-            <div class="front">
-                <h3 id="heading">Atonement Of Jesus Christ</h3>
+
+            <!---Fourth Card-->
+            <div class="thecard card4">
+                <div class="front">
+                    <h3 id="heading">Atonement Of Jesus Christ</h3>
+                </div>
+                <div id="atonement" class="back">The Back</div>
             </div>
-            <div id="atonement" class="back">The Back</div>
-        </div>
-        <div class="thecard card5">
-            <div class="front">
-                <h3>Physical Death</h3>
-                <img src="spiritworld.png" alt="Spirit World - Paradise - Spiritual Prison">
+
+            <!---Fifth Card-->
+            <div class="thecard card5">
+                <div class="front">
+                    <h3>Physical Death</h3>
+                    <img src="spiritworld.png" alt="Spirit World - Paradise - Spiritual Prison">
+                </div>
+                <div id="phyDeath" class="back" title="Spirit World - Paradise/Spiritual Prison">The Back</div>
             </div>
-            <div id="phyDeath" class="back" title="Spirit World - Paradise/Spiritual Prison">The Back</div>
-        </div>
-        <div class="thecard card6">
-            <div class="front">
-                <h3>Resurrection</h3>
+
+            <!---Sixth Card-->
+            <div class="thecard card6">
+                <div class="front">
+                    <h3>Resurrection</h3>
+                </div>
+                <div id="resurrection" class="back">The Back</div>
             </div>
-            <div id="resurrection" class="back">The Back</div>
+            <!---Seventh Card-->
+            <div class="thecard card7">
+                <div class="front"></div>
+                <div id="aftLife" class="back">The Back</div>
+            </div>
         </div>
-        <div class="thecard card7">
-            <div class="front"></div>
-            <div id="aftLife" class="back">The Back</div>
+        <!---Form-->
+        <div id="form">
+            <h2>Do you want to learn more?</h2>
+            <form action="">
+                <fieldset>
+                    <legend>Let us contact you!</legend>
+                    <label class="top" for="">Full Name<span>*</span>: <input id="name" type="text" name="fullName"
+                            placeholder="First and Last Name" required></label><br>
+                    <label class="top">Email<span>*</span>: <input id="email" type="email" name="email" placeholder="something@else.com"
+                            required></label><br>
+                    <label class="top">Phone Number<span>*</span>: <input id="phone" type="tel" name="phoneNumber"
+                            placeholder="5555555555" required></label><br>
+                    <label class="top">Address<span>*</span>: <input type="address" name="text" placeholder="123 false street"
+                            required></label><br>
+                    <label class="top">Zip Code: <input type="number" name="zipCode" placeholder="12345" min="00001"
+                            max="99999"></label><br>
+                    <button id="btn">Send form</button>
+                </fieldset>
+            </form>
+
         </div>
     </div>
 
     <div id="test"> </div>
 
-    <div id="form">
-        <h2>Do you want to learn more?</h2>
-        <form action="">
-            <fieldset>
-                <legend>Let us contact you!</legend>
-                <label class="top" for="">Full Name<span>*</span>: <input id="name" type="text" name="fullName"
-                        placeholder="First and Last Name" required></label><br>
-                <label class="top">Email<span>*</span>: <input id="email" type="email" name="email" placeholder="something@else.com"
-                        required></label><br>
-                <label class="top">Phone Number<span>*</span>: <input id="phone" type="tel" name="phoneNumber"
-                        placeholder="5555555555" required></label><br>
-                <label class="top">Address<span>*</span>: <input type="address" name="text" placeholder="123 false street"
-                        required></label><br>
-                <label class="top">Zip Code: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999"></label><br>
-                <button id="btn">Send form</button>
-            </fieldset>
-        </form>
 
-    </div>
     <div id="msg"></div>
 
     <script>
@@ -312,12 +337,12 @@
         console.table(users);
         // localStorage.clear();
         let theCard = document.getElementsByClassName('thecard');
-        for( i=0 ; i< theCard[i].lenght; i++){
+        for (i = 0; i < theCard[i].lenght; i++) {
             // theCard[i].addEventListener('mouseover', ()=>{
             console.log('You just put the mouse over me');
-        // });
+            // });
         }
-        
+
     </script>
 </body>
 

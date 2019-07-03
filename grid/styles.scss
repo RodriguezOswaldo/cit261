@@ -1,0 +1,36 @@
+$colors: rgb(128, 128, 128), rgb(234, 122, 212),rgb(73, 139, 82), rgb(223, 234, 122), rgb(182, 80, 55), rgb(65, 90, 158) ;
+body, html{
+    height: 100%;
+}
+body{
+    margin:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    margin:5rem;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));   
+    grid-gap: 1%;
+    cursor:pointer;
+    .card{
+        transition: transform 1s;
+
+        @for $i from 1 through 6{
+            &:nth-of-type(#{$i}){
+                background: nth($colors, $i);
+            }
+        }
+        &:hover{
+            transform: translateY(-10px);
+        }
+
+        img{
+            width:100%;
+        }
+        .info{
+            padding:1rem;
+        }
+    }
+}

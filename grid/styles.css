@@ -1,0 +1,178 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin: 5rem;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(12rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 1%;
+  cursor: pointer;
+}
+
+main .card {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.thecard {
+
+  transform-style: preserve-3d;
+  /* used in order to show the back of the card */
+  transition: all 1s ease-in;
+}
+.thecard:hover {
+  transform: rotateY(180deg) translateY( 400px) scale(1.5);
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #B7DBEE;
+  color: #333;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 15px;
+  box-shadow: #333 5px 5px 5px;
+}
+
+.card1>.front {
+  background-image: url('premortal.png');
+}
+
+.card2>.front {
+  background-image: url('creacion.png');
+}
+
+.card3>.front {
+  background-image: url('earthlife.png');
+}
+
+.card4>.front {
+  background-image: url('atonement.png');
+}
+
+.card4>.back {
+  background-image: url('jesus.jpg');
+}
+
+.card5>.front img {
+  text-align: center;
+  margin-left: -10px;
+}
+
+.card6>.front {
+  background-image: url('resurrection.png');
+}
+
+.card7>.front {
+  background-image: url('second.png');
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgb(67, 162, 165);
+  color: rgb(104, 105, 107);
+  transform: rotateY(180deg);
+  border-radius: 30px;
+  box-shadow: #159 0px 25px 60px;
+}
+
+#title {
+  animation-name: theTitle;
+  color: #233;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 1s;
+  grid-area: title;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+}
+#form{
+  margin: 40px;
+  grid-area: form;
+}
+fieldset{
+  border: #159 2px solid;
+  margin-right: 100px;
+  margin-left: 100px; 
+  text-align: left;
+}
+label{
+  font-size: 20px;
+
+}
+#heading{
+  color: rgb(47, 123, 199);
+}
+.top{
+  margin: 10px;
+  margin-top:120px;
+}
+input{
+  margin:10px;
+  font-size: 15px;
+}
+legend{
+  font-size: 25px;
+  font-weight: bold;
+}
+main .card:nth-of-type(1) {
+  background: gray;
+}
+
+main .card:nth-of-type(2) {
+  background: #ea7ad4;
+}
+
+main .card:nth-of-type(3) {
+  background: #498b52;
+}
+
+main .card:nth-of-type(4) {
+  background: #dfea7a;
+}
+
+main .card:nth-of-type(5) {
+  background: #b65037;
+}
+
+main .card:nth-of-type(6) {
+  background: #415a9e;
+}
+
+main .card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+main .card img {
+  width: 100%;
+}
+
+main .card .info {
+  padding: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */
