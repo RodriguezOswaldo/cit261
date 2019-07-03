@@ -24,6 +24,7 @@ header, main, footer{
     margin: 1.25rem auto;
     padding: 0.5rem;
     max-width: 900px;
+    border: #8f2a11 4px solid;
 }
 
 header, footer, footer a {
