@@ -192,6 +192,13 @@
                 transform: rotateX(0deg) scale(1);
             }
         }
+        .message{
+            color: #812525;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background: rgb(58, 126, 31);
+        }
     </style>
 </head>
 
@@ -296,41 +303,43 @@
             document.forms[0].reset();// clear the form for the next entries
 
             //for display purposes only
-            console.warn('added', { users });
-            let pre = document.querySelector('#msg');
-            pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
+            // console.warn('added', { users });
+            // let pre = document.querySelector('#msg');
+            // pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
 
             //saving to localStorage
-            localStorage.setItem('MyMovieList', JSON.stringify(users));//Saving the Array into local storage
-            var name = localStorage.getItem('MyMovieList');
+            localStorage.setItem('UserInfo', JSON.stringify(users));//Saving the Array into local storage
+            //Getting Data Typed in by the user
+            var name = localStorage.getItem('UserInfo');
             var parseName = JSON.parse(name);
-            console.log(parseName);
-            message = 'Thank you '+ parseName[0].name + ' !, will get in touch with you soon';
-
-            document.getElementById('practice').innerHTML = message;
+            
+            let userMessage = document.createElement('p');
+            //class name in order to style the element
+            userMessage.className ='message';
+            //Message for the user
+            message = 'Thank you '+ parseName[0].name + '! We will get in touch with you soon to your number ' + parseName[0].phone;
+           //Adding the message to the p element            
+            userMessage.append(message);
+            //Selecting the space where the message will be posted for the user to see!
+            let theContainer = document.getElementById('practice');
+            //Adding the text to the space in the page
+            theContainer.append(userMessage);
 
         //     document.getElementById('msg').innerHTML = parseName[0];
         }
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('btn').addEventListener('click', addUsers);
         });
-        console.table(users);
         // localStorage.clear();
 
         let theCard = document.getElementsByClassName('thecard');
-        for( i=0 ; i< theCard[i].lenght; i++){
-            theCard[i].addEventListener('mouseover', ()=>{
+        // for( i=0 ; i< theCard[i].lenght; i++){
+            theCard[0].addEventListener('mouseover', ()=>{
             console.log('You just put the mouse over me');
         });
-        }
+        
         
     </script>
 </body>
 
 </html>
-
-<!-- document.getElementById('output').innerHTML = parseName[0].title;
-}
-document.addEventListener('DOMContentLoaded', ()=>{
-document.getElementById('btn').addEventListener('click', addMovie);
-}); -->
