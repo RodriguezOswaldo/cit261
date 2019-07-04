@@ -17,6 +17,16 @@
             background: rgb(46, 145, 145);
             text-align: center;
         }
+        #title {
+            animation-name: theTitle;
+            color: #233;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            transition-property: transform, opacity;
+            transition-duration: 1s;
+            opacity: 0;
+        }
 
         .container {
             position: relative;
@@ -129,17 +139,6 @@
             animation-duration: 3s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
-        }
-
-        #title {
-            animation-name: theTitle;
-            color: #233;
-            animation-duration: 3s;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
-            transition-property: transform, opacity;
-            transition-duration: 1s;
-            opacity: 0;
         }
 
         h2 {
