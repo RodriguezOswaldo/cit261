@@ -375,10 +375,11 @@
             // let pre = document.querySelector('#msg');
             // pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
 
-            //saving to localStorage
-            localStorage.setItem('UserInfo', JSON.stringify(users));//Saving the Array into local storage
+            //saving to localStorage as a String
+            localStorage.setItem('UserInfo', JSON.stringify(users));
             //Getting Data Typed in by the user
             var name = localStorage.getItem('UserInfo');
+            //Converting the data into an object
             var parseName = JSON.parse(name);
             
             let userMessage = document.createElement('p');
