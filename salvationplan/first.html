@@ -255,7 +255,7 @@
                 <label class="top">Phone Number<span>*</span>: <input id="phone" type="tel" name="phoneNumber"
                         placeholder="5555555555" required></label><br>
                 <label class="top">Address<span>*</span>: <input type="address" name="text" placeholder="123 false street"
-                        required></label><br>
+                        ></label><br>
                 <label class="top">Zip Code: <input type="number" name="zipCode" placeholder="12345" min="00001" max="99999"></label><br>
                 <button id="btn">Send form</button>
             </fieldset>
@@ -263,6 +263,7 @@
 
     </div>
     <div id="msg"></div>
+    <div id="practice"></div>
 
     <script>
         const thePlan = new XMLHttpRequest();
@@ -270,7 +271,7 @@
         thePlan.onload = () => {
             var theData = JSON.parse(thePlan.responseText);
             console.log(theData);
-            console.log(theData[0].title)
+            console.log(theData[0].title);
             document.getElementById('preLife').innerHTML = "<h2>" + theData[0].title + "</h2>" + "<p>" + theData[0].explain + "</p>";
             document.getElementById('creation').innerHTML = "<h2>" + theData[1].title + "</h2>" + "<p>" + theData[1].explain + "</p>";
             document.getElementById('earthLife').innerHTML = "<h2>" + theData[2].title + "</h2>" + "<p>" + theData[2].explain + "</p>";
@@ -280,7 +281,8 @@
             document.getElementById('aftLife').innerHTML = "<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain + "</p>";
         }
         thePlan.send();
-
+        
+        let message = document.createElement('p');
         let users = [];
         const addUsers = (ev) => {
             ev.preventDefault(); //to stop the form submitting
@@ -299,26 +301,36 @@
             pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
 
             //saving to localStorage
-            localStorage.setItem('MyMovieList', JSON.stringify(users));
+            localStorage.setItem('MyMovieList', JSON.stringify(users));//Saving the Array into local storage
             var name = localStorage.getItem('MyMovieList');
             var parseName = JSON.parse(name);
             console.log(parseName);
+            message = 'Thank you '+ parseName[0].name + ' !, will get in touch with you soon';
 
-            document.getElementById('output').innerHTML = parseName;
+            document.getElementById('practice').innerHTML = message;
+
+        //     document.getElementById('msg').innerHTML = parseName[0];
         }
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('btn').addEventListener('click', addUsers);
         });
         console.table(users);
         // localStorage.clear();
+
         let theCard = document.getElementsByClassName('thecard');
         for( i=0 ; i< theCard[i].lenght; i++){
-            // theCard[i].addEventListener('mouseover', ()=>{
+            theCard[i].addEventListener('mouseover', ()=>{
             console.log('You just put the mouse over me');
-        // });
+        });
         }
         
     </script>
 </body>
 
 </html>
+
+<!-- document.getElementById('output').innerHTML = parseName[0].title;
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+document.getElementById('btn').addEventListener('click', addMovie);
+}); -->
