@@ -27,7 +27,6 @@
             transition-duration: 1s;
             opacity: 0;
         }
-
         .container {
             position: relative;
             display: flex;
@@ -41,8 +40,7 @@
             position: absolute;
             width: 14%;
             height: 100%;
-            transform-style: preserve-3d;
-            /* used in order to show the back of the card */
+            transform-style: preserve-3d; /* used in order to show the back of the card */
             transition: all 1s ease-in;
         }
 
@@ -340,6 +338,9 @@
     <div id="practice"></div>
 
     <script>
+        
+        /////////////////////////////////////////////////////
+        //The data to populate the back of the boxes.
         const thePlan = new XMLHttpRequest();
         thePlan.open('GET', 'https://rodriguezoswaldo.github.io/cit261/salvationplan/salvation.json', true);
         thePlan.onload = () => {
@@ -355,7 +356,9 @@
             document.getElementById('aftLife').innerHTML = "<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain + "</p>";
         }
         thePlan.send();
-        
+
+        /////////////////////////////////////////////////////
+        //saving in localStorage the input typed in by the user
         let message = document.createElement('p');
         let users = [];
         const addUsers = (ev) => {
@@ -368,14 +371,11 @@
             }
             users.push(user);//pusing into the Array Movies the input store in the variable movie.
             document.forms[0].reset();// clear the form for the next entries
-
-            //for display purposes only
-            // console.warn('added', { users });
-            // let pre = document.querySelector('#msg');
-            // pre.textContent = '\n' + JSON.stringify(users, '\t', 2);
-
             //saving to localStorage as a String
             localStorage.setItem('UserInfo', JSON.stringify(users));
+
+            /////////////////////////////////////////////////////
+            //Printing  a message for the user after submiting the form
             //Getting Data Typed in by the user
             var name = localStorage.getItem('UserInfo');
             //Converting the data into an object
@@ -392,8 +392,6 @@
             let theContainer = document.getElementById('practice');
             //Adding the text to the space in the page
             theContainer.append(userMessage);
-
-        //     document.getElementById('msg').innerHTML = parseName[0];
         }
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('btn').addEventListener('click', addUsers);
