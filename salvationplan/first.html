@@ -338,7 +338,7 @@
     <div id="practice"></div>
 
     <script>
-        
+
         /////////////////////////////////////////////////////
         //The data to populate the back of the boxes.
         const thePlan = new XMLHttpRequest();
@@ -359,13 +359,12 @@
 
         /////////////////////////////////////////////////////
         //saving in localStorage the input typed in by the user
-        let message = document.createElement('p');
+        // let message = document.createElement('p');
         let users = [];
         const addUsers = (ev) => {
             ev.preventDefault(); //to stop the form submitting
             let user = {
-                id: Date.now(),
-                name: document.getElementById('name').value,
+                name: document.getElementById('name').value,/* the value function after the dot is specifiying to get the value typed in */
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value
             }
@@ -380,7 +379,7 @@
             var name = localStorage.getItem('UserInfo');
             //Converting the data into an object
             var parseName = JSON.parse(name);
-            
+            //Creating the new element p
             let userMessage = document.createElement('p');
             //class name in order to style the element
             userMessage.className ='message';
