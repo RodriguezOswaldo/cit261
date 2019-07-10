@@ -196,12 +196,12 @@
             font-size: 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 20px;
-            background: #159;
             opacity: 1;
             animation-name: theMessage;
-            animation-fill-mode: forwards;
             transition-duration: 3s;
-            transition-property: all;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            transition-property: background;
         }
         .container{
             background: #3aa188;
@@ -215,7 +215,6 @@
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
             transition-property: transform;
-
         }
         @keyframes header{
             0%{
@@ -262,16 +261,13 @@
         @keyframes theMessage{
 
             0%{
-                box-shadow: #159 0px 25px 60px;
-                opacity: 0;
+                background: #159;
             }
             50%{
-                box-shadow: rgb(117, 91, 36) 25px 60px 0px;
-                opacity: 0.5;
+                background:rgb(117, 91, 36);
             }
             100%{
-                box-shadow: rgb(45, 117, 36) 0px 25px 60px;
-                opacity: 1;
+                background: rgb(45, 117, 36);
             }
         }
     </style>
