@@ -181,9 +181,6 @@
             border: #159 2px solid;
             background: rgb(15, 116, 116);;
             color:white;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-direction: unset; 
         }
     
         #btn:hover{
@@ -211,6 +208,31 @@
         }
         .fa{
             font-size: 15px;
+        }
+        .header{
+            animation-name: header;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            transition-property: transform;
+
+        }
+        @keyframes header{
+            0%{
+                transform: skewY(20deg);
+            }
+            25%{
+                transform: skewY(-20deg);
+            }
+            50%{
+                transform: skewY(20deg);
+            }
+            75%{
+                transform: skewY(-20deg);
+            }
+            100%{
+                transform: skewY(20deg);
+            }
         }
         @keyframes theTitle{
             0%{
@@ -252,18 +274,6 @@
                 opacity: 1;
             }
         }
-        @keyframes btn{
-            0%{
-                transform: scale(0.7);
-            }
-            50%{
-                transform: scale(1);
-            }
-            100%{
-                transform: scale(0.7);
-            }
-        }
-       
     </style>
 </head>
 
@@ -316,7 +326,7 @@
     <div id="test"> </div>
 
     <div id="form">
-        <h2>Do you want to learn more?</h2>
+        <h2 class="header">Do you want to learn more?</h2>
         <form action="">
             <fieldset>
                 <legend class="legend">Let us contact you!</legend>
