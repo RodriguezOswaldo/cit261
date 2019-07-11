@@ -24,7 +24,7 @@
             animation-delay: 1s;
             animation-fill-mode: forwards;
             transition-property: transform, opacity;
-            transition-duration: 1s;
+            transition-duration: 2s;
             opacity: 0;
         }
         .container {
@@ -137,6 +137,7 @@
             animation-duration: 3s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
+            transition-property: box-shadow;
         }
 
         h2 {
@@ -185,6 +186,7 @@
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
+            transition: border-radius 3s;
         }
     
         #btn:hover{
@@ -192,9 +194,9 @@
             color:black;
             border: #199 2px solid;
             animation-name:btnHover;
-            animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
+            transition: border-radius, background-color 3s;
         }
         span{
             color:red;
@@ -216,24 +218,7 @@
             animation-duration: 10s;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
-            transition-property: transform;
-        }
-        @keyframes header{
-            0%{
-                transform: skewY(20deg);
-            }
-            25%{
-                transform: skewY(-20deg);
-            }
-            50%{
-                transform: skewY(20deg);
-            }
-            75%{
-                transform: skewY(-20deg);
-            }
-            100%{
-                transform: skewY(20deg);
-            }
+            transition: transform 6s;
         }
         @keyframes theTitle{
             0%{
@@ -258,6 +243,23 @@
             }
             100%{
                 box-shadow: rgb(92, 145, 85) 0px 25px 25px;
+            }
+        }
+        @keyframes header{
+            0%{
+                transform: skewY(20deg);
+            }
+            25%{
+                transform: skewY(-20deg);
+            }
+            50%{
+                transform: skewY(20deg);
+            }
+            75%{
+                transform: skewY(-20deg);
+            }
+            100%{
+                transform: skewY(20deg);
             }
         }
         @keyframes btn{
@@ -430,13 +432,15 @@
             document.getElementById('btn').addEventListener('click', addUsers);
         });
         // localStorage.clear();
-
+        let form = document.getElementById('form');
         let theCard = document.getElementsByClassName('thecard');
         // for( i=0 ; i< theCard[i].lenght; i++){
             theCard[0].addEventListener('mouseover', ()=>{
             console.log('You just put the mouse over me');
+            form.style.animation = 
+            form.style.transition = 'display 0.5s linear 1s' ;
+            form.style.display = 'none';
         });
-        
         
     </script>
 </body>
