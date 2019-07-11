@@ -435,11 +435,9 @@
         let form = document.getElementById('form');
         let theCard = document.getElementsByClassName('thecard');
         // for( i=0 ; i< theCard[i].lenght; i++){
-            theCard[0].addEventListener('mouseover', ()=>{
-            console.log('You just put the mouse over me');
-            form.style.animation = 
-            form.style.transition = 'display 0.5s linear 1s' ;
-            form.style.display = 'none';
+            btn.addEventListener('click', ()=>{
+            form.style.transition = 'opacity 3s linear 1s' ;
+            form.style.opacity = '0';
         });
         
     </script>
