@@ -34,10 +34,24 @@
         @keyframes animate{
             0%,100%{
                 transform:translateX(-50px) translateY(-50px) scale(1);
-                
+                border:2px solid gray;
+                border-radius: 25% 25%;
+
+            }
+            25%{
+                border:2px solid rgb(216, 27, 153);
+
             }
             50%{
-                transform: translateX(100px) translateY(200px) scale(1.2);
+                transform: translateX(100px) translateY(200px) scale(1.5);
+                border:2px solid rgb(30, 27, 216);
+                border-radius: 50% 10%;
+
+
+            }
+            75%{
+                border:2px solid rgb(27, 216, 112);
+
             }
         }
         .loader span:nth-child(1){
