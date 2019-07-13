@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Gradient Buttons</title>
+    <style>
+        body{
+            margin:0;
+            padding:0; 
+            background-image: linear-gradient(to right, #b85027, #a1a1a1, #af4949);
+            background: #00cec9;
+        }
+        .container{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .btn{
+            border:none;
+            margin:10px;
+            padding:24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: uppercase;
+            border-radius: 6px;
+            cursor: pointer;
+            background-size: 200%;
+            transition: 0.6s;
+        }
+        .btn1{
+            background-image: linear-gradient(to left,#0984e3,#00cec9,#0984e3  )
+        }
+        .btn2{
+            background-image: linear-gradient(to left,#9b59b6,#00cec9,#9b59b6  )
+        }
+        .btn3{
+            background-image: linear-gradient(to left,#e67e22,#fdcb6e,#e67e22  )
+        }
+        .btn4{
+            background-image: linear-gradient(to left,#d63031,#ff7675,#d63031  )
+        }
+        .btn:hover{
+            background-position:right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn btn1">Hover me</button>
+        <button class="btn btn2">Hover me</button>
+        <button class="btn btn3">Hover me</button>
+        <button class="btn btn4">Hover me</button>
+    </div>
+</body>
+
+</html>
