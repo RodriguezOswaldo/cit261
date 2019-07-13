@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-image: linear-gradient(to right, #b85027, #a1a1a1, #af4949);
+            background: #89179e;
         }
         .loader{
             position: relative;
@@ -29,24 +29,14 @@
             box-sizing: border-box;
             border-radius: 25% 25%;
             transform: translateZ(-100px);
-            animation: animate 4s ease-in-out infinite;
+            animation: animate 3s ease-in-out infinite;
         }
         @keyframes animate{
             0%,100%{
-                transform:translateX(-50px) translateY(-50px) scale(1);
-                border:2px solid gray;
-                border-radius: 20% 20%;
-            }
-            25%{
-                border:2px solid rgb(216, 27, 153);
+                transform:translateZ(-100px);
             }
             50%{
-                transform: translateX(100px) translateY(200px) scale(1.5);
-                border:2px solid rgb(30, 27, 216);
-                border-radius: 50% 50%;
-            }
-            75%{
-                border:2px solid rgb(27, 216, 112);
+                transform: translateZ(100px);
             }
         }
         .loader span:nth-child(1){
