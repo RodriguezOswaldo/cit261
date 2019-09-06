@@ -199,8 +199,12 @@
         <h1>-----The End-----</h1>
     </section>
     <footer>
-            <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
+            <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning</a> | <span id="date">19 October 2018</span></p>
         </footer>
+        <script>
+            var date = new Date();
+            document.getElementById("date").innerHTML = date.toDateString();
+        </script>
 </body>
 
 </html>
