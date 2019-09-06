@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,60 +10,112 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 
-    <style> 
-        body{
+    <style>
+        body {
             background: #AEF;
             font-family: 'Chilanka', cursive;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             text-align: center;
             line-height: 1.5;
         }
-        h1{
+
+        h1 {
             font-size: 2em;
         }
-        h1, h2, h3{
+
+        h1,
+        h2,
+        h3 {
             font-weight: bolder;
+            color: rgb(34, 144, 178);
         }
-        img{
-            width:450px;
+
+        img {
+            width: 450px;
+            opacity: 0.9;
         }
-        .bold{
-            font-weight:900;
-            color:rgb(175, 25, 25);
+
+        .bold {
+            font-weight: 900;
+            color: rgb(175, 25, 25);
         }
-       
+
+        img:hover {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        p {
+            margin-top: -250px;
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+
+        section {
+            margin: 60px;
+        }
     </style>
     <title>Loan Mess!</title>
 </head>
+
 <body>
-        <h1>What a Mess!</h1>
+    <h1>What a Mess!</h1>
 
     <section class="section section1">
         <h2>The story</h2>
+        <img src="weds.jpeg" alt="wedding rings" title="wedding rings">
+
         <p>Laura and Ian were recently married and just moved into a new a
-            partment with no furniture. After shopping at local thrift stores 
+            partment with no furniture. After shopping at local thrift stores
             they have found a few things to furnish their apartment,
-             but they haven’t found a bed or a couch. They decide to spend some 
-            extra money to purchase a high quality bed and a comfortable couch that will 
-            last for a long time. The local furniture store is offering special financing. 
+            but they haven’t found a bed or a couch. They decide to spend some
+            extra money to purchase a high quality bed and a comfortable couch that will
+            last for a long time. The local furniture store is offering special financing.
             If Laura and Ian are approved for the store financing, they pay nothing at the time
-             of the purchase and they won’t have a payment due for six months.
-            </p>
-            <img src="weds.jpeg" alt="wedding rings" title="wedding rings">
+            of the purchase and they won’t have a payment due for six months.
+        </p>
     </section>
     <section class="section section2">
         <h2>The Temptation </h2>
         <img src="furniture.jpeg" alt="green couch" title="green couch">
-        <p>The total bill for the couch, bed frame, and mattress they select, 
+        <p>The total bill for the couch, bed frame, and mattress they select,
             including taxes and the delivery fee, is <span class="bold">$2435.31.</span> Laura and Ian know th
             at taking on debt can have big consequences. After asking more questions ab
-            out the furniture store financing, they learn the interest rate is  <span class="bold">22%</span> and 
+            out the furniture store financing, they learn the interest rate is <span class="bold">22%</span> and
             the minimum monthly payment is <span class="bold">$50.</span> They also learn that interest begins to acc
             rue at the time of the purchase. This means that interests accrues during the first si
             x months, even though they aren’t required to make payments.
-            </p>
+        </p>
     </section>
-    
+    <section>
+        <h2>Lucidity</h2>
+        <img src="finance.jpeg" alt="calculations" title="calculations">
+        <p>As they looked at the amortization schedule, they noticed that during the first
+            <span class="bold"> 6 months </span>their account balance would go up from <span class="bold"> $2435.31 to
+                $2765.57. </span>
+            This is an increase of more than <span class="bold">$330.</span> They also noticed that by <span class="bold">
+                month 7</span>,
+            the interest payments were slightly higher than the minimum payment of <span class="bold"> $50</span>.
+            If they only paid the minimum payment, they would never pay off the loan.
+            After two years they would have paid <span class="bold"> $900, but would still owe $2780.38.</span>
+            They noticed that even after making payments for two years, they would
+            still owe more than they originally borrowed.
+            </p>
+
+
+    </section>
+    <section>
+        <h2>Because they knew better</h2>
+         <img src="known.jpeg" alt="">
+            <p> Laura and Ian decide the store’s financing offer was not a good choice.
+                They had a personal credit card with a lower interest rate of <span class="bold"> 12%</span> that
+                they could use. Using the payment (PMT) function in Excel they found that if they
+                charged the new bed and couch to their credit card and made monthly payments of
+                <span class="bold"> $114.64</span> they would have the furniture paid off in two years.</p>
+        </p>
+        
+    </section>
 </body>
+
 </html>
