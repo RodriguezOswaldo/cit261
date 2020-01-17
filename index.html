@@ -57,7 +57,13 @@
         </ul>
     </main>
     <footer>
-        <p>&copy;2019 | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
+        <p>&copy; <span id="year"></span> | <a href="https://github.com/RodriguezOswaldo">Oswaldo Rodríguez S.</a> | South Carolina | <a href="http://www.byui.edu/online">BYU-I Online Learning.</a></p>
     </footer>
+    <script>
+        var date = new Date();
+    var n = date.getFullYear();
+    console.log(n); 
+    var year = document.getElementById('year').innerHTML = n;
+    </script>
 </body>
 </html>
