@@ -385,13 +385,13 @@
             var theData = JSON.parse(thePlan.responseText);
             console.log(theData);
             console.log(theData[0].title);
-            document.getElementById('preLife').innerHTML = "<h2>" + theData[0].title + "</h2>" + "<p>" + theData[0].explain + "</p>";
+            document.getElementById('preLife').innerHTML = "<h2>" + theData[0].title + "</h2>" + "<p>" + theData[0].explain + "</p>" + "<p> Jeremías 1:5 <p>";
             document.getElementById('creation').innerHTML = "<h2>" + theData[1].title + "</h2>" + "<p>" + theData[1].explain + "</p>";
-            document.getElementById('earthLife').innerHTML = "<h2>" + theData[2].title + "</h2>" + "<p>" + theData[2].explain + "</p>";
-            document.getElementById('atonement').innerHTML = "<h2>" + theData[3].title + "</h2>" + "<p>" + theData[3].explain + "</p>";
-            document.getElementById('phyDeath').innerHTML = "<h2>" + theData[4].title + "</h2>" + "<p>" + theData[4].explain + "</p>";
-            document.getElementById('resurrection').innerHTML = "<h2>" + theData[5].title + "</h2>" + "<p>" + theData[5].explain + "</p>";
-            document.getElementById('aftLife').innerHTML = "<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain + "</p>";
+            document.getElementById('earthLife').innerHTML = "<h2>" + theData[2].title + "</h2>" + "<p>" + theData[2].explain + "</p>" + "<p> Alma 12:24 </p>";
+            document.getElementById('atonement').innerHTML = "<h2>" + theData[3].title + "</h2>" + "<p>" + theData[3].explain + "</p>"+"<p> Alma 7: 11-13 </p>";
+            document.getElementById('phyDeath').innerHTML = "<h2>" + theData[4].title + "</h2>" + "<p>" + theData[4].explain + "</p>" +"<p>Alma 40:11-13 </p>" ;
+            document.getElementById('resurrection').innerHTML = "<h2>" + theData[5].title + "</h2>" + "<p>" + theData[5].explain + "</p>" + "<p> Alma 11:44</p>";
+            document.getElementById('aftLife').innerHTML = "<h2>" + theData[6].title + "</h2>" + "<p>" + theData[6].explain + "</p>" + "<p> 1 Corintios 15:41-42 </p>";
         }
         thePlan.send();
 

@@ -1,0 +1,4 @@
+Error: No configuration provided for /Users/Own/Desktop/BYU-I/SpringSemester2019/CIT261/cit261/transitions2/stylesheet.css
+    at module.exports (/usr/local/lib/node_modules/stylelint/lib/utils/configurationError.js:10:14)
+    at /usr/local/lib/node_modules/stylelint/lib/getConfigForFile.js:56:11
+    at async Promise.all (index 0)
